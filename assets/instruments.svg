@@ -1,84 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 696" width="480" height="696" role="img" aria-labelledby="t d">
-<title id="t">Instrument panel</title>
-<desc id="d">Skills by category. Languages: Python, Java. ML/DL: PyTorch, scikit-learn. LLMs &amp; Agents: LangGraph, LangChain, CrewAI, RAG, vector DBs. Geospatial: Rasterio/GDAL, GeoPandas, Sentinel-1/2, STAC. Web: React, Node.js, Next.js, TypeScript. Tools: Git, Supabase, Vercel, Render, n8n. Flight log: B.Tech AI &amp; Data Science, JECRC Jaipur (2025-2029 expected), CGPA 8.3/10. AI Engineer at Qualfocus (Apr-Jun 2026), interior-design visualization app. IBM RAG and Agentic AI Professional Certificate (Coursera).</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 494" width="480" height="494" role="img" aria-labelledby="t d">
+<title id="t">The Citadel</title>
+<desc id="d">Skills, linked like a maester's chain. Languages: Python, Java. ML/DL: PyTorch, scikit-learn. LLMs &amp; Agents: LangGraph, LangChain, CrewAI, RAG, vector DBs. Geospatial: Rasterio/GDAL, GeoPandas, Sentinel-1/2, STAC. Web: React, Node.js, Next.js, TypeScript. Tools: Git, Supabase, Vercel, Render, n8n.</desc>
 <style>
 text{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 .b{font-weight:700}
-.f-bg{fill:#0b1020}.f-pn{fill:#121a38}.f-ln{fill:#1c2850}
-.f-tx{fill:#d6e2ff}.f-mu{fill:#8a99c4}
-.f-gr{fill:#39ff88}.f-am{fill:#ffb020}.f-cy{fill:#4cc9f0}
-.s-ln{stroke:#26335f}.s-mu{stroke:#8a99c4}
-.s-gr{stroke:#39ff88}.s-am{stroke:#ffb020}.s-cy{stroke:#4cc9f0}
-.scan{display:none}
-.cursor{opacity:0}
-/*LIGHT*/@media (prefers-color-scheme: light){
-.f-bg{fill:#f3f6ff}.f-pn{fill:#ffffff}.f-ln{fill:#e4eafb}
-.f-tx{fill:#0f1a3a}.f-mu{fill:#475687}
-.f-gr{fill:#007a38}.f-am{fill:#955700}.f-cy{fill:#0a6890}
-.s-ln{stroke:#c3cfee}.s-mu{stroke:#475687}
-.s-gr{stroke:#007a38}.s-am{stroke:#955700}.s-cy{stroke:#0a6890}
-}/*ENDLIGHT*/@media (prefers-reduced-motion: no-preference){
-@keyframes blink{0%,55%{opacity:1}70%,100%{opacity:.2}}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes march{to{stroke-dashoffset:-36}}
-@keyframes scan{from{transform:translateY(-4px)}to{transform:translateY(696px)}}
-@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
-.led{animation:blink 2.2s infinite}.led2{animation:blink 2.2s .7s infinite}.led3{animation:blink 2.2s 1.4s infinite}
-.sp1{animation:spin 30s linear infinite}.sp2{animation:spin 48s linear infinite reverse}.sp3{animation:spin 20s linear infinite}
-.march{animation:march 2.4s linear infinite}
-.scan{display:block;animation:scan 7s linear infinite}
-.pulse{animation:pulse 3s ease-in-out infinite}
-}</style>
-<defs><pattern id="sl" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1.4" class="f-tx" opacity=".045"/></pattern></defs>
-<rect width="480" height="696" rx="8" class="f-bg"/>
-<text x="24" y="30" font-size="13" letter-spacing="2" class="f-am b">INSTRUMENT PANEL</text>
-<line x1="0" y1="42" x2="480" y2="42" class="s-ln"/>
-<circle cx="30" cy="61" r="4" class="f-gr led"/>
-<text x="42" y="66" font-size="15" class="f-tx b">Languages</text>
-<rect x="24" y="76" width="68" height="24" rx="4" class="f-ln"/><text x="33" y="93" font-size="14" class="f-tx">Python</text>
-<rect x="98" y="76" width="52" height="24" rx="4" class="f-ln"/><text x="107" y="93" font-size="14" class="f-tx">Java</text>
-<circle cx="30" cy="123" r="4" class="f-gr led2"/>
-<text x="42" y="128" font-size="15" class="f-tx b">ML/DL</text>
-<rect x="24" y="138" width="77" height="24" rx="4" class="f-ln"/><text x="33" y="155" font-size="14" class="f-tx">PyTorch</text>
-<rect x="107" y="138" width="119" height="24" rx="4" class="f-ln"/><text x="116" y="155" font-size="14" class="f-tx">scikit-learn</text>
-<circle cx="30" cy="185" r="4" class="f-gr led3"/>
-<text x="42" y="190" font-size="15" class="f-tx b">LLMs &amp; Agents</text>
-<rect x="24" y="200" width="94" height="24" rx="4" class="f-ln"/><text x="33" y="217" font-size="14" class="f-tx">LangGraph</text>
-<rect x="124" y="200" width="94" height="24" rx="4" class="f-ln"/><text x="133" y="217" font-size="14" class="f-tx">LangChain</text>
-<rect x="224" y="200" width="68" height="24" rx="4" class="f-ln"/><text x="233" y="217" font-size="14" class="f-tx">CrewAI</text>
-<rect x="298" y="200" width="43" height="24" rx="4" class="f-ln"/><text x="307" y="217" font-size="14" class="f-tx">RAG</text>
-<rect x="347" y="200" width="102" height="24" rx="4" class="f-ln"/><text x="356" y="217" font-size="14" class="f-tx">vector DBs</text>
-<circle cx="30" cy="247" r="4" class="f-gr led"/>
-<text x="42" y="252" font-size="15" class="f-tx b">Geospatial</text>
-<rect x="24" y="262" width="127" height="24" rx="4" class="f-ln"/><text x="33" y="279" font-size="14" class="f-tx">Rasterio/GDAL</text>
-<rect x="157" y="262" width="94" height="24" rx="4" class="f-ln"/><text x="166" y="279" font-size="14" class="f-tx">GeoPandas</text>
-<rect x="257" y="262" width="119" height="24" rx="4" class="f-ln"/><text x="266" y="279" font-size="14" class="f-tx">Sentinel-1/2</text>
-<rect x="382" y="262" width="52" height="24" rx="4" class="f-ln"/><text x="391" y="279" font-size="14" class="f-tx">STAC</text>
-<circle cx="30" cy="309" r="4" class="f-gr led2"/>
-<text x="42" y="314" font-size="15" class="f-tx b">Web</text>
-<rect x="24" y="324" width="60" height="24" rx="4" class="f-ln"/><text x="33" y="341" font-size="14" class="f-tx">React</text>
-<rect x="90" y="324" width="77" height="24" rx="4" class="f-ln"/><text x="99" y="341" font-size="14" class="f-tx">Node.js</text>
-<rect x="173" y="324" width="77" height="24" rx="4" class="f-ln"/><text x="182" y="341" font-size="14" class="f-tx">Next.js</text>
-<rect x="256" y="324" width="102" height="24" rx="4" class="f-ln"/><text x="265" y="341" font-size="14" class="f-tx">TypeScript</text>
-<circle cx="30" cy="371" r="4" class="f-gr led3"/>
-<text x="42" y="376" font-size="15" class="f-tx b">Tools</text>
-<rect x="24" y="386" width="43" height="24" rx="4" class="f-ln"/><text x="33" y="403" font-size="14" class="f-tx">Git</text>
-<rect x="73" y="386" width="85" height="24" rx="4" class="f-ln"/><text x="82" y="403" font-size="14" class="f-tx">Supabase</text>
-<rect x="164" y="386" width="68" height="24" rx="4" class="f-ln"/><text x="173" y="403" font-size="14" class="f-tx">Vercel</text>
-<rect x="238" y="386" width="68" height="24" rx="4" class="f-ln"/><text x="247" y="403" font-size="14" class="f-tx">Render</text>
-<rect x="312" y="386" width="43" height="24" rx="4" class="f-ln"/><text x="321" y="403" font-size="14" class="f-tx">n8n</text>
-<line x1="0" y1="428" x2="480" y2="428" class="s-ln"/>
-<text x="24" y="456" font-size="13" letter-spacing="2" class="f-am b">FLIGHT LOG</text>
-<text x="24" y="482" font-size="14" class="f-cy b">EDU</text>
-<text x="24" y="502" font-size="14" class="f-tx">B.Tech AI &amp; Data Science, JECRC Jaipur (2025-2029</text>
-<text x="24" y="522" font-size="14" class="f-tx">expected), CGPA 8.3/10</text>
-<text x="24" y="552" font-size="14" class="f-cy b">EXP</text>
-<text x="24" y="572" font-size="14" class="f-tx">AI Engineer at Qualfocus (Apr-Jun 2026),</text>
-<text x="24" y="592" font-size="14" class="f-tx">interior-design visualization app</text>
-<text x="24" y="622" font-size="14" class="f-cy b">CERT</text>
-<text x="24" y="642" font-size="14" class="f-tx">IBM RAG and Agentic AI Professional Certificate</text>
-<text x="24" y="662" font-size="14" class="f-tx">(Coursera)</text>
-<rect width="480" height="696" rx="8" fill="url(#sl)"/>
-<rect class="scan f-cy" width="480" height="2" opacity=".18"/>
-<rect x=".5" y=".5" width="479" height="695" rx="8" fill="none" class="s-ln"/>
+.bg{fill:#0a0a0a}.ink{fill:#e8e2d0}.mu{fill:#a39e8c}.rd{fill:#b3202a}
+.s-ink{stroke:#e8e2d0}.s-rd{stroke:#b3202a}
+.nw{display:none}
+.ft{opacity:0}.ft0{opacity:1}/*LIGHT*/@media (prefers-color-scheme: light){
+.bg{fill:#efe8d6}.ink{fill:#14110f}.mu{fill:#5a5247}.rd{fill:#b3202a}
+.s-ink{stroke:#14110f}.s-rd{stroke:#b3202a}
+}/*ENDLIGHT*/
+/*NARROW*/@media (max-width: 520px){.wd{display:none}.nw{display:inline}}/*ENDNARROW*/
+@media (prefers-reduced-motion: no-preference){@keyframes blink{0%,55%{opacity:1}70%,100%{opacity:.25}}.led{animation:blink 2.6s infinite}@keyframes ft{0%{opacity:1}12.50%,100%{opacity:0}}.ft{animation:ft 12s steps(1,end) infinite}.ft0{animation-delay:0.00s}.ft1{animation-delay:1.50s}.ft2{animation-delay:3.00s}.ft3{animation-delay:4.50s}.ft4{animation-delay:6.00s}.ft5{animation-delay:7.50s}.ft6{animation-delay:9.00s}.ft7{animation-delay:10.50s}}</style>
+<rect width="480" height="494" rx="8" class="bg"/>
+<text x="24" y="36" font-size="15" letter-spacing="2" class="ink b">THE CITADEL</text>
+<g transform="translate(372 10)" class="ink" font-size="10" xml:space="preserve"><g class="ft ft0"><text x="36" y="8" textLength="12" lengthAdjust="spacing">--</text><text x="24" y="18" textLength="36" lengthAdjust="spacing">.-**-.</text><text x="18" y="28" textLength="42" lengthAdjust="spacing">.-+-*-=</text><text x="24" y="38" textLength="36" lengthAdjust="spacing">=*+=#=</text><text x="24" y="48" textLength="36" lengthAdjust="spacing">-+==+=</text><text x="24" y="58" textLength="36" lengthAdjust="spacing">=+***-</text><text x="24" y="68" textLength="36" lengthAdjust="spacing">-*+*+=</text><text x="0" y="78" textLength="84" lengthAdjust="spacing">:.:.=+++*=:.:.</text></g><g class="ft ft1"><text x="36" y="8" textLength="12" lengthAdjust="spacing">--</text><text x="24" y="18" textLength="36" lengthAdjust="spacing">.-**=.</text><text x="18" y="28" textLength="42" lengthAdjust="spacing">.=+-*-=</text><text x="24" y="38" textLength="36" lengthAdjust="spacing">+#++#=</text><text x="24" y="48" textLength="36" lengthAdjust="spacing">-*=+*=</text><text x="24" y="58" textLength="36" lengthAdjust="spacing">=*#*#=</text><text x="24" y="68" textLength="36" lengthAdjust="spacing">=****=</text><text x="0" y="78" textLength="84" lengthAdjust="spacing">:.:.=+++*=:.:.</text></g><g class="ft ft2"><text x="36" y="8" textLength="12" lengthAdjust="spacing">-=</text><text x="24" y="18" textLength="36" lengthAdjust="spacing">.=##=.</text><text x="18" y="28" textLength="42" lengthAdjust="spacing">.=*=#=+</text><text x="24" y="38" textLength="36" lengthAdjust="spacing">+%*+%+</text><text x="24" y="48" textLength="36" lengthAdjust="spacing">=#++*=</text><text x="24" y="58" textLength="36" lengthAdjust="spacing">+####=</text><text x="24" y="68" textLength="36" lengthAdjust="spacing">=#*#*+</text><text x="0" y="78" textLength="84" lengthAdjust="spacing">:.:.+**+*=:.:.</text></g><g class="ft ft3"><text x="36" y="8" textLength="12" lengthAdjust="spacing">==</text><text x="24" y="18" textLength="36" lengthAdjust="spacing">.=#%=.</text><text x="18" y="28" textLength="42" lengthAdjust="spacing">:+*=#=+</text><text x="24" y="38" textLength="36" lengthAdjust="spacing">*%*+%+</text><text x="24" y="48" textLength="36" lengthAdjust="spacing">=#=+*+</text><text x="24" y="58" textLength="36" lengthAdjust="spacing">+#%#%+</text><text x="24" y="68" textLength="36" lengthAdjust="spacing">+%###+</text><text x="0" y="78" textLength="84" lengthAdjust="spacing">:.:.+*#*#+:.:.</text></g><g class="ft ft4"><text x="36" y="8" textLength="12" lengthAdjust="spacing">=+</text><text x="24" y="18" textLength="36" lengthAdjust="spacing">.=#%=.</text><text x="18" y="28" textLength="42" lengthAdjust="spacing">:=*=#=+</text><text x="24" y="38" textLength="36" lengthAdjust="spacing">+#++%+</text><text x="24" y="48" textLength="36" lengthAdjust="spacing">=*=+*=</text><text x="24" y="58" textLength="36" lengthAdjust="spacing">+####+</text><text x="24" y="68" textLength="36" lengthAdjust="spacing">+%#%#+</text><text x="0" y="78" textLength="84" lengthAdjust="spacing">:::.+####+:.:.</text></g><g class="ft ft5"><text x="36" y="8" textLength="12" lengthAdjust="spacing">=+</text><text x="24" y="18" textLength="36" lengthAdjust="spacing">.=##=.</text><text x="18" y="28" textLength="42" lengthAdjust="spacing">:=+-*-+</text><text x="24" y="38" textLength="36" lengthAdjust="spacing">+*+=#=</text><text x="24" y="48" textLength="36" lengthAdjust="spacing">=*==+=</text><text x="24" y="58" textLength="36" lengthAdjust="spacing">+*#*#=</text><text x="24" y="68" textLength="36" lengthAdjust="spacing">+####+</text><text x="0" y="78" textLength="84" lengthAdjust="spacing">:::.+####+:.::</text></g><g class="ft ft6"><text x="36" y="8" textLength="12" lengthAdjust="spacing">==</text><text x="24" y="18" textLength="36" lengthAdjust="spacing">.=*#=.</text><text x="18" y="28" textLength="42" lengthAdjust="spacing">.=+-*-=</text><text x="24" y="38" textLength="36" lengthAdjust="spacing">=*==*=</text><text x="24" y="48" textLength="36" lengthAdjust="spacing">-+-=+=</text><text x="24" y="58" textLength="36" lengthAdjust="spacing">=****=</text><text x="24" y="68" textLength="36" lengthAdjust="spacing">=#***+</text><text x="0" y="78" textLength="84" lengthAdjust="spacing">:::.+***#+:.::</text></g><g class="ft ft7"><text x="36" y="8" textLength="12" lengthAdjust="spacing">-=</text><text x="24" y="18" textLength="36" lengthAdjust="spacing">.-**-.</text><text x="18" y="28" textLength="42" lengthAdjust="spacing">.-=-+-=</text><text x="24" y="38" textLength="36" lengthAdjust="spacing">=*==*=</text><text x="24" y="48" textLength="36" lengthAdjust="spacing">-+-=+-</text><text x="24" y="58" textLength="36" lengthAdjust="spacing">=+*+*-</text><text x="24" y="68" textLength="36" lengthAdjust="spacing">=*+*+=</text><text x="0" y="78" textLength="84" lengthAdjust="spacing">:.:.++*+*=:.:.</text></g></g>
+<circle cx="28" cy="72" r="3.5" class="rd"/>
+<text x="38" y="82" font-size="15" class="ink b">Languages</text>
+<rect x="162.5" y="64.5" width="76" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="173" y="83" font-size="15" class="ink">Python</text>
+<ellipse cx="246" cy="78" rx="10" ry="4.5" fill="none" class="s-ink" stroke-width="1.5" opacity=".75"/>
+<rect x="254.5" y="64.5" width="58" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="265" y="83" font-size="15" class="ink">Java</text>
+<circle cx="28" cy="116" r="3.5" class="rd"/>
+<text x="38" y="126" font-size="15" class="ink b">ML/DL</text>
+<rect x="162.5" y="108.5" width="85" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="173" y="127" font-size="15" class="ink">PyTorch</text>
+<ellipse cx="255" cy="122" rx="10" ry="4.5" fill="none" class="s-ink" stroke-width="1.5" opacity=".75"/>
+<rect x="263.5" y="108.5" width="130" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="274" y="127" font-size="15" class="ink">scikit-learn</text>
+<circle cx="28" cy="160" r="3.5" class="rd"/>
+<text x="38" y="170" font-size="15" class="ink b">LLMs &amp; Agents</text>
+<rect x="162.5" y="152.5" width="103" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="173" y="171" font-size="15" class="ink">LangGraph</text>
+<ellipse cx="273" cy="166" rx="10" ry="4.5" fill="none" class="s-ink" stroke-width="1.5" opacity=".75"/>
+<rect x="281.5" y="152.5" width="103" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="292" y="171" font-size="15" class="ink">LangChain</text>
+<rect x="162.5" y="188.5" width="76" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="173" y="207" font-size="15" class="ink">CrewAI</text>
+<ellipse cx="246" cy="202" rx="10" ry="4.5" fill="none" class="s-ink" stroke-width="1.5" opacity=".75"/>
+<rect x="254.5" y="188.5" width="49" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="265" y="207" font-size="15" class="ink">RAG</text>
+<ellipse cx="311" cy="202" rx="10" ry="4.5" fill="none" class="s-ink" stroke-width="1.5" opacity=".75"/>
+<rect x="319.5" y="188.5" width="112" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="330" y="207" font-size="15" class="ink">vector DBs</text>
+<circle cx="28" cy="240" r="3.5" class="rd"/>
+<text x="38" y="250" font-size="15" class="ink b">Geospatial</text>
+<rect x="162.5" y="232.5" width="139" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="173" y="251" font-size="15" class="ink">Rasterio/GDAL</text>
+<ellipse cx="309" cy="246" rx="10" ry="4.5" fill="none" class="s-ink" stroke-width="1.5" opacity=".75"/>
+<rect x="317.5" y="232.5" width="103" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="328" y="251" font-size="15" class="ink">GeoPandas</text>
+<rect x="162.5" y="268.5" width="130" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="173" y="287" font-size="15" class="ink">Sentinel-1/2</text>
+<ellipse cx="300" cy="282" rx="10" ry="4.5" fill="none" class="s-ink" stroke-width="1.5" opacity=".75"/>
+<rect x="308.5" y="268.5" width="58" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="319" y="287" font-size="15" class="ink">STAC</text>
+<circle cx="28" cy="320" r="3.5" class="rd"/>
+<text x="38" y="330" font-size="15" class="ink b">Web</text>
+<rect x="162.5" y="312.5" width="67" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="173" y="331" font-size="15" class="ink">React</text>
+<ellipse cx="237" cy="326" rx="10" ry="4.5" fill="none" class="s-ink" stroke-width="1.5" opacity=".75"/>
+<rect x="245.5" y="312.5" width="85" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="256" y="331" font-size="15" class="ink">Node.js</text>
+<ellipse cx="338" cy="326" rx="10" ry="4.5" fill="none" class="s-ink" stroke-width="1.5" opacity=".75"/>
+<rect x="346.5" y="312.5" width="85" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="357" y="331" font-size="15" class="ink">Next.js</text>
+<rect x="162.5" y="348.5" width="112" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="173" y="367" font-size="15" class="ink">TypeScript</text>
+<circle cx="28" cy="400" r="3.5" class="rd"/>
+<text x="38" y="410" font-size="15" class="ink b">Tools</text>
+<rect x="162.5" y="392.5" width="49" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="173" y="411" font-size="15" class="ink">Git</text>
+<ellipse cx="219" cy="406" rx="10" ry="4.5" fill="none" class="s-ink" stroke-width="1.5" opacity=".75"/>
+<rect x="227.5" y="392.5" width="94" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="238" y="411" font-size="15" class="ink">Supabase</text>
+<ellipse cx="329" cy="406" rx="10" ry="4.5" fill="none" class="s-ink" stroke-width="1.5" opacity=".75"/>
+<rect x="337.5" y="392.5" width="76" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="348" y="411" font-size="15" class="ink">Vercel</text>
+<rect x="162.5" y="428.5" width="76" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="173" y="447" font-size="15" class="ink">Render</text>
+<ellipse cx="246" cy="442" rx="10" ry="4.5" fill="none" class="s-ink" stroke-width="1.5" opacity=".75"/>
+<rect x="254.5" y="428.5" width="49" height="28" rx="14" class="bg s-ink" stroke-width="1.5" stroke-opacity=".7"/>
+<text x="265" y="447" font-size="15" class="ink">n8n</text>
+<g class="mu" font-size="10" xml:space="preserve"><text x="66" y="476" textLength="366" lengthAdjust="spacing">. ..::----=======-=--:-::.::::-:--==+=+=+=+==----::.... . . .</text></g>
+<rect x=".5" y=".5" width="479" height="493" rx="8" fill="none" class="s-ink" opacity=".22"/>
 </svg>

@@ -77,7 +77,14 @@ const rows = Object.entries(bytes)
 
 const out = path.join(root, "assets");
 await mkdir(out, { recursive: true });
-await writeFile(path.join(out, "streak.svg"), streakSvg({ current, longest, total: cal.totalContributions, date: today }));
-await writeFile(path.join(out, "languages.svg"), langSvg({ rows, date: today }));
-await writeFile(path.join(out, "activity.svg"), activitySvg({ weeks: weekly, total: weekly.reduce((a, b) => a + b, 0), date: today }));
+// Raw numbers are kept beside the SVGs so a theme rebuild (build.mjs) can re-render them offline.
+const live = {
+  streak: { current, longest, total: cal.totalContributions, date: today },
+  languages: { rows, date: today },
+  activity: { weeks: weekly, total: weekly.reduce((a, b) => a + b, 0), date: today },
+};
+await writeFile(path.join(out, "live-data.json"), JSON.stringify(live, null, 2) + "\n");
+await writeFile(path.join(out, "streak.svg"), streakSvg(live.streak));
+await writeFile(path.join(out, "languages.svg"), langSvg(live.languages));
+await writeFile(path.join(out, "activity.svg"), activitySvg(live.activity));
 console.log(`live stats refreshed for ${login}: streak ${current}/${longest}, ${rows.length} languages`);

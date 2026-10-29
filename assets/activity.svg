@@ -1,42 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 392 260" width="392" height="260" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 392 292" width="392" height="292" role="img" aria-labelledby="t d">
 <title id="t">Recent activity</title>
-<desc id="d">Weekly public contributions over the last 26 weeks: 585 in total, busiest week 188.</desc>
+<desc id="d">Weekly activity chart, waiting for the first scheduled data refresh.</desc>
 <style>
 text{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 .b{font-weight:700}
-.f-bg{fill:#0b1020}.f-pn{fill:#121a38}.f-ln{fill:#1c2850}
-.f-tx{fill:#d6e2ff}.f-mu{fill:#8a99c4}
-.f-gr{fill:#39ff88}.f-am{fill:#ffb020}.f-cy{fill:#4cc9f0}
-.s-ln{stroke:#26335f}.s-mu{stroke:#8a99c4}
-.s-gr{stroke:#39ff88}.s-am{stroke:#ffb020}.s-cy{stroke:#4cc9f0}
-.scan{display:none}
-.cursor{opacity:0}
+.bg{fill:#0a0a0a}.ink{fill:#e8e2d0}.mu{fill:#a39e8c}.rd{fill:#b3202a}
+.s-ink{stroke:#e8e2d0}.s-rd{stroke:#b3202a}
+.nw{display:none}
 /*LIGHT*/@media (prefers-color-scheme: light){
-.f-bg{fill:#f3f6ff}.f-pn{fill:#ffffff}.f-ln{fill:#e4eafb}
-.f-tx{fill:#0f1a3a}.f-mu{fill:#475687}
-.f-gr{fill:#007a38}.f-am{fill:#955700}.f-cy{fill:#0a6890}
-.s-ln{stroke:#c3cfee}.s-mu{stroke:#475687}
-.s-gr{stroke:#007a38}.s-am{stroke:#955700}.s-cy{stroke:#0a6890}
-}/*ENDLIGHT*/@media (prefers-reduced-motion: no-preference){
-@keyframes blink{0%,55%{opacity:1}70%,100%{opacity:.2}}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes march{to{stroke-dashoffset:-36}}
-@keyframes scan{from{transform:translateY(-4px)}to{transform:translateY(260px)}}
-@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
-.led{animation:blink 2.2s infinite}.led2{animation:blink 2.2s .7s infinite}.led3{animation:blink 2.2s 1.4s infinite}
-.sp1{animation:spin 30s linear infinite}.sp2{animation:spin 48s linear infinite reverse}.sp3{animation:spin 20s linear infinite}
-.march{animation:march 2.4s linear infinite}
-.scan{display:block;animation:scan 7s linear infinite}
-.pulse{animation:pulse 3s ease-in-out infinite}
-}</style>
-<defs><pattern id="sl" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1.4" class="f-tx" opacity=".045"/></pattern></defs>
-<rect width="392" height="260" rx="10" class="f-bg"/>
-<text x="18" y="30" font-size="12" letter-spacing="1.5" class="f-am b">ACTIVITY // 26 WEEKS</text>
-<line x1="18" y1="42" x2="374" y2="42" class="s-ln"/><rect x="18.0" y="194" width="10.2" height="2" rx="1.5" class="f-cy"/><rect x="31.7" y="194" width="10.2" height="2" rx="1.5" class="f-cy" opacity=".35"/><rect x="45.4" y="194" width="10.2" height="2" rx="1.5" class="f-cy" opacity=".35"/><rect x="59.1" y="194" width="10.2" height="2" rx="1.5" class="f-cy" opacity=".35"/><rect x="72.8" y="194" width="10.2" height="2" rx="1.5" class="f-cy" opacity=".35"/><rect x="86.5" y="194" width="10.2" height="2" rx="1.5" class="f-cy" opacity=".35"/><rect x="100.2" y="194" width="10.2" height="2" rx="1.5" class="f-cy" opacity=".35"/><rect x="113.8" y="194" width="10.2" height="2" rx="1.5" class="f-cy" opacity=".35"/><rect x="127.5" y="194" width="10.2" height="2" rx="1.5" class="f-cy"/><rect x="141.2" y="194" width="10.2" height="2" rx="1.5" class="f-cy" opacity=".35"/><rect x="154.9" y="194" width="10.2" height="2" rx="1.5" class="f-cy" opacity=".35"/><rect x="168.6" y="194" width="10.2" height="2" rx="1.5" class="f-cy" opacity=".35"/><rect x="182.3" y="194" width="10.2" height="2" rx="1.5" class="f-cy" opacity=".35"/><rect x="196.0" y="194" width="10.2" height="2" rx="1.5" class="f-cy" opacity=".35"/><rect x="209.7" y="194" width="10.2" height="2" rx="1.5" class="f-cy" opacity=".35"/><rect x="223.4" y="194" width="10.2" height="2" rx="1.5" class="f-cy" opacity=".35"/><rect x="237.1" y="181" width="10.2" height="15" rx="1.5" class="f-cy"/><rect x="250.8" y="188" width="10.2" height="8" rx="1.5" class="f-cy"/><rect x="264.5" y="189" width="10.2" height="7" rx="1.5" class="f-cy"/><rect x="278.2" y="194" width="10.2" height="2" rx="1.5" class="f-cy" opacity=".35"/><rect x="291.8" y="177" width="10.2" height="19" rx="1.5" class="f-cy"/><rect x="305.5" y="93" width="10.2" height="103" rx="1.5" class="f-cy"/><rect x="319.2" y="76" width="10.2" height="120" rx="1.5" class="f-gr"/><rect x="332.9" y="152" width="10.2" height="44" rx="1.5" class="f-cy"/><rect x="346.6" y="146" width="10.2" height="50" rx="1.5" class="f-cy"/><rect x="360.3" y="191" width="10.2" height="5" rx="1.5" class="f-cy"/><line x1="18" y1="198" x2="374" y2="198" class="s-mu" opacity=".5"/>
-<text x="18" y="218" font-size="12" class="f-mu">26 WEEKS AGO</text>
-<text x="374" y="218" font-size="12" text-anchor="end" class="f-mu">NOW</text>
-<text x="18" y="246" font-size="12" class="f-mu">TOTAL 585 · PEAK WEEK 188 · 2026-10-29</text>
-<rect width="392" height="260" rx="10" fill="url(#sl)"/>
-<rect class="scan f-cy" width="392" height="2" opacity=".18"/>
-<rect x=".5" y=".5" width="391" height="259" rx="10" fill="none" class="s-ln"/>
+.bg{fill:#efe8d6}.ink{fill:#14110f}.mu{fill:#5a5247}.rd{fill:#b3202a}
+.s-ink{stroke:#14110f}.s-rd{stroke:#b3202a}
+}/*ENDLIGHT*/
+/*NARROW*/@media (max-width: 520px){.wd{display:none}.nw{display:inline}}/*ENDNARROW*/
+@media (prefers-reduced-motion: no-preference){@keyframes blink{0%,55%{opacity:1}70%,100%{opacity:.25}}.led{animation:blink 2.6s infinite}}</style>
+<rect width="392" height="292" rx="8" class="bg"/>
+<text x="18" y="32" font-size="13" letter-spacing="1.5" class="ink b">ACTIVITY · 26 WEEKS</text>
+<g class="ink" font-size="10" xml:space="preserve"></g>
+<g class="mu" font-size="10" xml:space="preserve"><text x="22.1" y="198" textLength="356" lengthAdjust="spacing">..........................</text></g>
+<text x="18" y="226" font-size="13" class="mu">26 WEEKS AGO</text>
+<text x="374" y="226" font-size="13" text-anchor="end" class="mu">NOW</text>
+<text x="18" y="276" font-size="13" class="mu">AWAITING THE FIRST RAVEN</text>
+<rect x=".5" y=".5" width="391" height="291" rx="8" fill="none" class="s-ink" opacity=".22"/>
 </svg>

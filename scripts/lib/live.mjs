@@ -1,26 +1,24 @@
-// Renderers for the three live-stat SVGs. Pass `null` for a placeholder.
-import { doc, esc, led } from "./svg.mjs";
+// Renderers for the three live-stat SVGs, in the ink/dither theme. Pass `null` for a placeholder.
+import { docInk, esc, tilesPanel } from "./svg.mjs";
+import { ditherRows, rowSvg } from "./ascii.mjs";
 
 const NOTE = "PUBLIC CONTRIBUTIONS ONLY";
+const WAIT = "AWAITING THE FIRST RAVEN";
 
+// 800 wide -> text >= 22px.
 export function streakSvg(d) {
-  const w = 800, h = 172;
-  const tiles = [
-    [["CURRENT", "STREAK"], d ? `${d.current}d` : "--", "gr"],
-    [["LONGEST STREAK", "LAST 12 MONTHS"], d ? `${d.longest}d` : "--", "am"],
-    [["CONTRIBUTIONS", "LAST 12 MONTHS"], d ? String(d.total) : "--", "cy"],
-  ];
-  let body = "";
-  tiles.forEach(([label, value, tone], i) => {
-    const x = 13 + i * 262;
-    body += `<rect x="${x}" y="14" width="250" height="122" rx="6" class="f-pn s-ln"/>
-${led(x + 232, 32, "f-gr", ["led", "led2", "led3"][i])}
-<text x="${x + 16}" y="70" font-size="44" class="f-${tone} b">${esc(value)}</text>
-<text x="${x + 16}" y="98" font-size="18" class="f-tx">${esc(label[0])}</text>
-<text x="${x + 16}" y="120" font-size="18" class="f-tx">${esc(label[1])}</text>`;
+  const w = 800, h = 266;
+  const body = tilesPanel({
+    title: "THE UNBROKEN WATCH",
+    tiles: [
+      { label: "CURRENT STREAK", value: d ? `${d.current}d` : "--", key: !!d },
+      { label: "LONGEST STREAK", value: d ? `${d.longest}d` : "--" },
+      { label: "CONTRIBUTIONS", value: d ? String(d.total) : "--" },
+    ],
+    // the longest streak and the total both cover the API's 12-month window
+    footnote: d ? [`LAST 12 MONTHS · ${NOTE}`, d.date] : [WAIT, NOTE],
   });
-  body += `<text x="16" y="159" font-size="14" class="f-mu">${d ? `${NOTE} · UPDATED ${d.date}` : "AWAITING FIRST UPLINK · " + NOTE}</text>`;
-  return doc({
+  return docInk({
     w, h, round: 8,
     title: "Contribution streak",
     desc: d
@@ -30,23 +28,23 @@ ${led(x + 232, 32, "f-gr", ["led", "led2", "led3"][i])}
   });
 }
 
+// 392 wide -> text >= 13px. Bars are dithered ASCII; the top language is red.
 export function langSvg(d) {
-  const w = 392, h = 260;
-  let body = `<text x="18" y="30" font-size="12" letter-spacing="1.5" class="f-am b">LANGUAGES // PUBLIC REPOS</text>
-<line x1="18" y1="42" x2="${w - 18}" y2="42" class="s-ln"/>`;
+  const w = 392, h = 292, cols = 26;
+  let body = `<text x="18" y="32" font-size="13" letter-spacing="1.5" class="ink b">LANGUAGES · PUBLIC REPOS</text>`;
   const rows = d ? d.rows : [];
-  if (!rows.length) body += `<text x="18" y="100" font-size="14" class="f-mu">AWAITING FIRST UPLINK</text>`;
+  if (!rows.length) body += `<text x="18" y="110" font-size="13" class="mu">${WAIT}</text>`;
   rows.forEach((r, i) => {
-    const y = 66 + i * 30;
-    const bw = Math.max(3, Math.round((r.pct / rows[0].pct) * 170));
-    body += `<text x="18" y="${y + 10}" font-size="13" class="f-tx">${esc(r.name.slice(0, 14))}</text>
-<rect x="136" y="${y}" width="170" height="11" rx="3" class="f-ln"/>
-<rect x="136" y="${y}" width="${bw}" height="11" rx="3" class="${i === 0 ? "f-gr" : "f-cy"}"/>
-<text x="${w - 18}" y="${y + 10}" font-size="13" text-anchor="end" class="f-mu">${r.pct.toFixed(1)}%</text>`;
+    const y = 66 + i * 32;
+    const fill = (r.pct / rows[0].pct) * cols;
+    const values = Array.from({ length: cols }, (_, c) => ({ v: c < Math.floor(fill) ? 0.86 : c < fill ? 0.5 : 0.1, red: i === 0 }));
+    body += `<text x="18" y="${y + 10}" font-size="13" class="ink">${esc(r.name.slice(0, 13))}</text>
+<g class="ink" font-size="10" xml:space="preserve">${rowSvg(ditherRows(values, cols, 1)[0], 130, y + 9, 6)}</g>
+<text x="${w - 18}" y="${y + 10}" font-size="13" text-anchor="end" class="mu">${r.pct < 0.1 ? "&lt;0.1" : r.pct.toFixed(1)}%</text>`;
   });
-  body += `<text x="18" y="${h - 14}" font-size="12" class="f-mu">${d ? `BY BYTES · UPDATED ${d.date}` : NOTE}</text>`;
-  return doc({
-    w, h, round: 10,
+  body += `<text x="18" y="${h - 16}" font-size="13" class="mu">${d ? `BY BYTES · ${d.date}` : NOTE}</text>`;
+  return docInk({
+    w, h, round: 8,
     title: "Top languages",
     desc: d && rows.length
       ? "Top languages by share of code across public repositories: " + rows.map((r) => `${r.name} ${r.pct.toFixed(1)}%`).join(", ") + "."
@@ -55,23 +53,30 @@ export function langSvg(d) {
   });
 }
 
+// 392 wide. One dithered ASCII column per week; the busiest week is red.
 export function activitySvg(d) {
-  const w = 392, h = 260;
-  let body = `<text x="18" y="30" font-size="12" letter-spacing="1.5" class="f-am b">ACTIVITY // 26 WEEKS</text>
-<line x1="18" y1="42" x2="${w - 18}" y2="42" class="s-ln"/>`;
+  const w = 392, h = 292, R = 13, ch = 10;
   const weeks = d ? d.weeks : new Array(26).fill(0);
+  const C = weeks.length, cw = 356 / C;
   const max = Math.max(1, ...weeks);
-  const bw = 356 / weeks.length;
-  weeks.forEach((v, i) => {
-    const bh = Math.max(2, Math.round((v / max) * 120));
-    body += `<rect x="${(18 + i * bw).toFixed(1)}" y="${196 - bh}" width="${(bw - 3.5).toFixed(1)}" height="${bh}" rx="1.5" class="${v === max && d ? "f-gr" : "f-cy"}"${v ? "" : ' opacity=".35"'}/>`;
-  });
-  body += `<line x1="18" y1="198" x2="${w - 18}" y2="198" class="s-mu" opacity=".5"/>
-<text x="18" y="218" font-size="12" class="f-mu">26 WEEKS AGO</text>
-<text x="${w - 18}" y="218" font-size="12" text-anchor="end" class="f-mu">NOW</text>
-<text x="18" y="${h - 14}" font-size="12" class="f-mu">${d ? `TOTAL ${d.total} · PEAK WEEK ${max} · ${d.date}` : "AWAITING FIRST UPLINK · " + NOTE}</text>`;
-  return doc({
-    w, h, round: 10,
+  const values = [];
+  for (let r = 0; r < R; r++)
+    for (let c = 0; c < C; c++) {
+      const hgt = (weeks[c] / max) * R; // bar height in rows
+      const fromBottom = R - 1 - r;
+      values.push({ v: Math.max(0, Math.min(1, hgt - fromBottom)) * 0.9, red: !!d && weeks[c] === max });
+    }
+  const x0 = +(18 + cw * 0.3).toFixed(1);
+  const art = ditherRows(values, C, R).map((row, r) => rowSvg(row, x0, 60 + (r + 1) * ch - 2, cw)).join("");
+  const base = rowSvg({ chars: ".".repeat(C), red: new Array(C).fill(false) }, x0, 198, cw);
+  const body = `<text x="18" y="32" font-size="13" letter-spacing="1.5" class="ink b">ACTIVITY · 26 WEEKS</text>
+<g class="ink" font-size="10" xml:space="preserve">${art}</g>
+<g class="mu" font-size="10" xml:space="preserve">${base}</g>
+<text x="18" y="226" font-size="13" class="mu">26 WEEKS AGO</text>
+<text x="${w - 18}" y="226" font-size="13" text-anchor="end" class="mu">NOW</text>
+<text x="18" y="${h - 16}" font-size="13" class="mu">${d ? `TOTAL ${d.total} · PEAK ${max} · ${d.date}` : WAIT}</text>`;
+  return docInk({
+    w, h, round: 8,
     title: "Recent activity",
     desc: d
       ? `Weekly public contributions over the last 26 weeks: ${d.total} in total, busiest week ${max}.`

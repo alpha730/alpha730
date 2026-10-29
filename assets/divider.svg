@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 28" width="800" height="28" role="img" aria-labelledby="t d">
+<title id="t">Divider</title>
+<desc id="d">A thin dithered ASCII ink strip separating sections.</desc>
+<style>
+text{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+.b{font-weight:700}
+.bg{fill:#0a0a0a}.ink{fill:#e8e2d0}.mu{fill:#a39e8c}.rd{fill:#b3202a}
+.s-ink{stroke:#e8e2d0}.s-rd{stroke:#b3202a}
+.nw{display:none}
+.fd{opacity:0}.fd0{opacity:1}/*LIGHT*/@media (prefers-color-scheme: light){
+.bg{fill:#efe8d6}.ink{fill:#14110f}.mu{fill:#5a5247}.rd{fill:#b3202a}
+.s-ink{stroke:#14110f}.s-rd{stroke:#b3202a}
+}/*ENDLIGHT*/
+/*NARROW*/@media (max-width: 520px){.wd{display:none}.nw{display:inline}}/*ENDNARROW*/
+@media (prefers-reduced-motion: no-preference){@keyframes blink{0%,55%{opacity:1}70%,100%{opacity:.25}}.led{animation:blink 2.6s infinite}@keyframes fd{0%{opacity:1}16.67%,100%{opacity:0}}.fd{animation:fd 9s steps(1,end) infinite}.fd0{animation-delay:0.00s}.fd1{animation-delay:1.50s}.fd2{animation-delay:3.00s}.fd3{animation-delay:4.50s}.fd4{animation-delay:6.00s}.fd5{animation-delay:7.50s}}</style>
+
+<g class="mu" font-size="10" xml:space="preserve"><g class="fd fd0"><text x="58" y="12" textLength="654" lengthAdjust="spacing">. ......:...:........ ......::::----=------:-::.:...:.:.::-:--=-=-=-=----::::.........:.:.:::::::::.:.... . .</text><text x="28" y="22" textLength="750" lengthAdjust="spacing">. . ....:.:.:.:.:.......:.::----====+=+=+==-=--:-:::::::--==++++*+*+*++=+==--:::::::::-:--=-===-=-=----::.:.... . . ... . . .</text></g><g class="fd fd1"><text x="82" y="12" textLength="654" lengthAdjust="spacing">. ....:.:.:.:.:.:...........::::----=-=-=----::::.:.:...::::-:--=-=-=----::::...........:.:.:.:::.:.:.... . .</text><text x="28" y="22" textLength="750" lengthAdjust="spacing">. . ....:.:::::::::::::.:.:.:.::----==+=+++++++==----:::::::----==++*+*+*++++==--:-::::.::::-:----=-=----::::...... . . . . .</text></g><g class="fd fd2"><text x="82" y="12" textLength="654" lengthAdjust="spacing">. . ....:.:::::::::::...........::::----=-=-=----:-::.:.:...:.::-:------=----::::.:...... ......:.:.:...... .</text><text x="52" y="22" textLength="702" lengthAdjust="spacing">. . ..:.::::-:-:-:-:-::::.:.:.::-:--==+=++++*++=+==--:-:::::-:--====++++*++++==----::::.:.:.::::---:---:-::.:.... . .</text></g><g class="fd fd3"><text x="58" y="12" textLength="690" lengthAdjust="spacing">.   .   . . ....:.::-:-:-::::.:.:.......:.::-:--=-===-=----::::.:...:.::::-:---------::::.:.... . . . ........... .</text><text x="28" y="22" textLength="726" lengthAdjust="spacing">. . . . . ....:.::-:----=----:-::::.::::-:--==+=++*+*++++==-=--:-:::::-:--==+=+++++=+==-=--::::.:.:.::::::::-::::.:.... .</text></g><g class="fd fd4"><text x="46" y="12" textLength="714" lengthAdjust="spacing">. . . . . . . . ......::::-:---:-:-::::.......:.::-:--=-===-=-=--:-::.:.......::::-:---:-:-::::.:.. . . . . . . . . . .</text><text x="28" y="22" textLength="750" lengthAdjust="spacing">. . . . . . ....:.::-:--=-=-===-=--:-:::::::::--====++*+*+*++++==--:-:::::::----==+=+++=+==-=--::::.:...:.:.:.:.:.:.:.... . .</text></g><g class="fd fd5"><text x="58" y="12" textLength="678" lengthAdjust="spacing">. ....... ... . . ....:.::::-:-------:-::.:.:...:.::::----=-=-=-=----::::.......:.::::::-:-:-::::.... . .   .   .</text><text x="28" y="22" textLength="750" lengthAdjust="spacing">. . ................:.::----====+======--:-:::::::-:--==++++*+*+*++==----:::::::-:--=-==+=+====----::::.................. . .</text></g></g>
+
+</svg>

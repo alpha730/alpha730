@@ -1,5 +1,5 @@
-// Shared SVG helpers. Output is plain strings: no dependencies, so the
-// GitHub Action can run the live-stats script without `npm install`.
+// Shared SVG helpers for the "Ink Garden x Godswood" theme. Plain strings, no
+// dependencies, so the GitHub Action can run the live-stats script without `npm install`.
 
 export const FONT = 'ui-monospace,"SF Mono",Menlo,Consolas,monospace';
 export const CW = 0.6; // monospace advance width per 1px of font size
@@ -22,82 +22,74 @@ export function wrap(text, maxChars) {
   return out;
 }
 
-// Colour roles. Dark is the default; light is applied through the media block.
-const BASE = `
+// Ink black / bone / one blood-red accent; parchment + ink in light mode.
+// Red (#b3202a) is reserved for art, large numbers and status dots: on ink black it
+// is ~3:1, enough for large text only, so small labels stay bone or muted.
+const INK_BASE = `
 text{font-family:${FONT}}
 .b{font-weight:700}
-.f-bg{fill:#0b1020}.f-pn{fill:#121a38}.f-ln{fill:#1c2850}
-.f-tx{fill:#d6e2ff}.f-mu{fill:#8a99c4}
-.f-gr{fill:#39ff88}.f-am{fill:#ffb020}.f-cy{fill:#4cc9f0}
-.s-ln{stroke:#26335f}.s-mu{stroke:#8a99c4}
-.s-gr{stroke:#39ff88}.s-am{stroke:#ffb020}.s-cy{stroke:#4cc9f0}
-.scan{display:none}
-.cursor{opacity:0}
+.bg{fill:#0a0a0a}.ink{fill:#e8e2d0}.mu{fill:#a39e8c}.rd{fill:#b3202a}
+.s-ink{stroke:#e8e2d0}.s-rd{stroke:#b3202a}
+.nw{display:none}
 `;
-
-const LIGHT = `
-.f-bg{fill:#f3f6ff}.f-pn{fill:#ffffff}.f-ln{fill:#e4eafb}
-.f-tx{fill:#0f1a3a}.f-mu{fill:#475687}
-.f-gr{fill:#007a38}.f-am{fill:#955700}.f-cy{fill:#0a6890}
-.s-ln{stroke:#c3cfee}.s-mu{stroke:#475687}
-.s-gr{stroke:#007a38}.s-am{stroke:#955700}.s-cy{stroke:#0a6890}
+const INK_LIGHT = `
+.bg{fill:#efe8d6}.ink{fill:#14110f}.mu{fill:#5a5247}.rd{fill:#b3202a}
+.s-ink{stroke:#14110f}.s-rd{stroke:#b3202a}
 `;
+// Narrow display (an <img> SVG's media queries see its rendered width): swap
+// `.wd` (wide-only) for `.nw` (narrow-only) elements.
+const NARROW = `.wd{display:none}.nw{display:inline}`;
 
-// Everything animated lives here so prefers-reduced-motion users get a still image.
-const motion = (h) => `
-@keyframes blink{0%,55%{opacity:1}70%,100%{opacity:.2}}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes march{to{stroke-dashoffset:-36}}
-@keyframes scan{from{transform:translateY(-4px)}to{transform:translateY(${h}px)}}
-@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
-.led{animation:blink 2.2s infinite}.led2{animation:blink 2.2s .7s infinite}.led3{animation:blink 2.2s 1.4s infinite}
-.sp1{animation:spin 30s linear infinite}.sp2{animation:spin 48s linear infinite reverse}.sp3{animation:spin 20s linear infinite}
-.march{animation:march 2.4s linear infinite}
-.scan{display:block;animation:scan 7s linear infinite}
-.pulse{animation:pulse 3s ease-in-out infinite}
-`;
-
-export function doc({ w, h, title, desc, defs = "", body, css = "", mot = "", round = 0 }) {
+export function docInk({ w, h, title, desc, body, css = "", mot = "", round = 0, frame = true, bg = true }) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-labelledby="t d">
 <title id="t">${esc(title)}</title>
 <desc id="d">${esc(desc)}</desc>
-<style>${BASE}${css}/*LIGHT*/@media (prefers-color-scheme: light){${LIGHT}}/*ENDLIGHT*/@media (prefers-reduced-motion: no-preference){${motion(h)}${mot}}</style>
-<defs><pattern id="sl" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1.4" class="f-tx" opacity=".045"/></pattern>${defs}</defs>
-<rect width="${w}" height="${h}" rx="${round}" class="f-bg"/>
+<style>${INK_BASE}${css}/*LIGHT*/@media (prefers-color-scheme: light){${INK_LIGHT}}/*ENDLIGHT*/
+/*NARROW*/@media (max-width: 520px){${NARROW}}/*ENDNARROW*/
+@media (prefers-reduced-motion: no-preference){@keyframes blink{0%,55%{opacity:1}70%,100%{opacity:.25}}.led{animation:blink 2.6s infinite}${mot}}</style>
+${bg ? `<rect width="${w}" height="${h}" rx="${round}" class="bg"/>` : ""}
 ${body}
-<rect width="${w}" height="${h}" rx="${round}" fill="url(#sl)"/>
-<rect class="scan f-cy" width="${w}" height="2" opacity=".18"/>
-<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="${round}" fill="none" class="s-ln"/>
+${frame ? `<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="${round}" fill="none" class="s-ink" opacity=".22"/>` : ""}
 </svg>
 `;
 }
 
-export const led = (x, y, cls = "f-gr", blink = "led", r = 5) =>
-  `<circle cx="${x}" cy="${y}" r="${r}" class="${cls} ${blink}"/>`;
+// 800-wide panel of three number tiles (Ledger, streak). Wide: three tiles in a row.
+// Narrow (<= 520px shown): three stacked rows at 28px+, so text stays >= 10px at 330px.
+// tiles: [{ value, label, key }] -- key values are drawn in red (large text only).
+// footnote: array of parts; wide joins them on one line, narrow gives each its own line.
+export function tilesPanel({ title, tiles, footnote = [], extra = "" }) {
+  const tw = 248;
+  let wide = `<text x="24" y="42" font-size="22" letter-spacing="2" class="ink b">${esc(title)}</text>`;
+  let narrow = `<text x="24" y="46" font-size="30" letter-spacing="1" class="ink b">${esc(title)}</text>`;
+  tiles.forEach((t, i) => {
+    const x = 12 + i * (tw + 16);
+    const cls = t.key ? "rd" : "ink";
+    wide += `
+<rect x="${x + 0.5}" y="62.5" width="${tw}" height="116" rx="4" fill="none" class="s-ink" opacity=".3"/>
+<text x="${x + 18}" y="126" font-size="50" class="${cls} b">${esc(t.value)}</text>
+<text x="${x + 18}" y="162" font-size="22" class="mu">${esc(t.label)}</text>`;
+    const y = 96 + i * 44;
+    narrow += `
+<text x="24" y="${y}" font-size="42" class="${cls} b">${esc(t.value)}</text>
+<text x="232" y="${y}" font-size="28" class="mu">${esc(t.label)}</text>`;
+  });
+  if (footnote.length) {
+    wide += `<text x="24" y="226" font-size="22" class="mu">${esc(footnote.join(" · "))}</text>`;
+    footnote.forEach((line, i) => (narrow += `<text x="24" y="${226 + i * 30}" font-size="26" class="mu">${esc(line)}</text>`));
+  }
+  return `<g class="wd">${wide}${extra}</g><g class="nw">${narrow}</g>${dot(772, 34, 6)}`;
+}
 
-export function chip(x, y, text, fs = 13) {
-  const w = Math.round(text.length * fs * CW + 18);
-  const h = fs + 10;
+export const dot =(x, y, r = 5, blink = true) => `<circle cx="${x}" cy="${y}" r="${r}" class="rd${blink ? " led" : ""}"/>`;
+
+// Outlined tag, used for stacks on the banners.
+export function tag(x, y, text, fs = 13) {
+  const w = Math.round(text.length * fs * CW + 16);
+  const h = fs + 11;
   return {
     w,
     h,
-    svg: `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="4" class="f-ln"/><text x="${x + 9}" y="${y + h - 7}" font-size="${fs}" class="f-tx">${esc(text)}</text>`,
+    svg: `<rect x="${x + 0.5}" y="${y + 0.5}" width="${w}" height="${h}" rx="3" fill="none" class="s-ink" opacity=".45"/><text x="${x + 8.5}" y="${y + h - 7}" font-size="${fs}" class="ink">${esc(text)}</text>`,
   };
-}
-
-export function globe(cx, cy, r) {
-  const k = 0.866 * r;
-  return `<circle cx="${cx}" cy="${cy}" r="${r}" class="f-pn s-cy" stroke-width="1.5"/>
-<ellipse cx="${cx}" cy="${cy}" rx="${r * 0.42}" ry="${r}" fill="none" class="s-cy" opacity=".5"/>
-<ellipse cx="${cx}" cy="${cy}" rx="${r * 0.8}" ry="${r}" fill="none" class="s-cy" opacity=".3"/>
-<line x1="${cx - r}" y1="${cy}" x2="${cx + r}" y2="${cy}" class="s-cy" opacity=".5"/>
-<line x1="${cx - k}" y1="${cy - r / 2}" x2="${cx + k}" y2="${cy - r / 2}" class="s-cy" opacity=".3"/>
-<line x1="${cx - k}" y1="${cy + r / 2}" x2="${cx + k}" y2="${cy + r / 2}" class="s-cy" opacity=".3"/>`;
-}
-
-export function orbit(cx, cy, R, spin, dotCls, angle = 0) {
-  const a = (angle * Math.PI) / 180;
-  const dx = (cx + R * Math.cos(a)).toFixed(1);
-  const dy = (cy + R * Math.sin(a)).toFixed(1);
-  return `<g class="${spin}" style="transform-origin:${cx}px ${cy}px"><circle cx="${cx}" cy="${cy}" r="${R}" fill="none" class="s-mu" stroke-dasharray="3 7" opacity=".55"/><circle cx="${dx}" cy="${dy}" r="5" class="${dotCls}"/></g>`;
 }
