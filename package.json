@@ -1,0 +1,14 @@
+{
+  "name": "alpha730-profile",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "live": "node scripts/live-stats.mjs",
+    "render": "node scripts/render-check.mjs",
+    "validate": "node scripts/validate.mjs"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "2.6.2"
+  }
+}

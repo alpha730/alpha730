@@ -1,0 +1,55 @@
+{
+  "person": {
+    "name": "Aryan Kumar",
+    "github": "alpha730",
+    "portfolio": "https://aryan-kumar-portfolio-eight.vercel.app/",
+    "role": "AI Engineer · Earth Observation · LLM Agent Safety"
+  },
+  "education": "B.Tech AI & Data Science, JECRC Jaipur (2025-2029 expected), CGPA 8.3/10",
+  "experience": "AI Engineer at Qualfocus (Apr-Jun 2026), interior-design visualization app",
+  "certification": "IBM RAG and Agentic AI Professional Certificate (Coursera)",
+  "telemetry": [
+    { "value": "660", "label": ["EVALUATION", "RUNS"], "tone": "cy" },
+    { "value": "0/600", "label": ["HARMFUL", "ACTIONS"], "tone": "gr" },
+    { "value": "139", "label": ["AUTOMATED", "TESTS"], "tone": "cy" },
+    { "value": "8.3", "label": ["CGPA", "/ 10"], "tone": "am" }
+  ],
+  "missions": [
+    {
+      "title": "Prompt-injection robustness study",
+      "repo": "Prompt-injection-Tester-",
+      "description": "LangGraph agent (Qwen via Groq) answering remote-sensing questions over Sentinel-2 NDVI, Sentinel-1 water extent and ERA5 rainfall for 6 Indian regions. 20 tasks, 5 injection styles (incl. Hindi), 2 defenses, 660 runs.",
+      "result": { "text": "0 of 600 attacked runs led to a harmful action. Task success 96.5-100%.", "tone": "gr" },
+      "stack": ["LangGraph", "Qwen via Groq", "Sentinel-1/2", "ERA5"]
+    },
+    {
+      "title": "AI-Powered Remote Sensing Analysis Platform",
+      "repo": "sih-project",
+      "description": "Agentic Earth-observation system on SAR + optical imagery with visual question answering (VQA).",
+      "result": null,
+      "stack": ["Python", "PyTorch", "LangGraph", "Rasterio"]
+    },
+    {
+      "title": "ASHA Voice Logging Agent",
+      "repo": "ASHA-Voice-Logging-Agent",
+      "description": "Multilingual (Hindi, English, Marwari) voice agent turning home-visit reports into structured health records. Sarvam Saaras v3 STT, LLM extraction, Supabase. Safety-first IMNCI triage with a deterministic, source-cited rules engine.",
+      "result": { "text": "139 automated tests", "tone": "cy" },
+      "stack": ["Next.js", "TypeScript", "Supabase", "Sarvam Saaras v3"]
+    },
+    {
+      "title": "Decade Hunt: Duolingo English Test x JECRC AR game",
+      "repo": "DUO-Game",
+      "description": "AR game for Duolingo's 10-year campaign at JECRC. Scan posters to catch \"Lingos\"; level system with streaks.",
+      "result": { "text": "Played at the campus event on Oct 22, 2026", "tone": "am" },
+      "stack": ["React", "TypeScript", "MindAR", "Firebase"]
+    }
+  ],
+  "instruments": [
+    { "label": "Languages", "items": ["Python", "Java"] },
+    { "label": "ML/DL", "items": ["PyTorch", "scikit-learn"] },
+    { "label": "LLMs & Agents", "items": ["LangGraph", "LangChain", "CrewAI", "RAG", "vector DBs"] },
+    { "label": "Geospatial", "items": ["Rasterio/GDAL", "GeoPandas", "Sentinel-1/2", "STAC"] },
+    { "label": "Web", "items": ["React", "Node.js", "Next.js", "TypeScript"] },
+    { "label": "Tools", "items": ["Git", "Supabase", "Vercel", "Render", "n8n"] }
+  ]
+}

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 172" width="800" height="172" role="img" aria-labelledby="t d">
+<title id="t">Contribution streak</title>
+<desc id="d">Contribution streak panel, waiting for the first scheduled data refresh.</desc>
+<style>
+text{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+.b{font-weight:700}
+.f-bg{fill:#0b1020}.f-pn{fill:#121a38}.f-ln{fill:#1c2850}
+.f-tx{fill:#d6e2ff}.f-mu{fill:#8a99c4}
+.f-gr{fill:#39ff88}.f-am{fill:#ffb020}.f-cy{fill:#4cc9f0}
+.s-ln{stroke:#26335f}.s-mu{stroke:#8a99c4}
+.s-gr{stroke:#39ff88}.s-am{stroke:#ffb020}.s-cy{stroke:#4cc9f0}
+.scan{display:none}
+.cursor{opacity:0}
+/*LIGHT*/@media (prefers-color-scheme: light){
+.f-bg{fill:#f3f6ff}.f-pn{fill:#ffffff}.f-ln{fill:#e4eafb}
+.f-tx{fill:#0f1a3a}.f-mu{fill:#475687}
+.f-gr{fill:#007a38}.f-am{fill:#955700}.f-cy{fill:#0a6890}
+.s-ln{stroke:#c3cfee}.s-mu{stroke:#475687}
+.s-gr{stroke:#007a38}.s-am{stroke:#955700}.s-cy{stroke:#0a6890}
+}/*ENDLIGHT*/@media (prefers-reduced-motion: no-preference){
+@keyframes blink{0%,55%{opacity:1}70%,100%{opacity:.2}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes march{to{stroke-dashoffset:-36}}
+@keyframes scan{from{transform:translateY(-4px)}to{transform:translateY(172px)}}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+.led{animation:blink 2.2s infinite}.led2{animation:blink 2.2s .7s infinite}.led3{animation:blink 2.2s 1.4s infinite}
+.sp1{animation:spin 30s linear infinite}.sp2{animation:spin 48s linear infinite reverse}.sp3{animation:spin 20s linear infinite}
+.march{animation:march 2.4s linear infinite}
+.scan{display:block;animation:scan 7s linear infinite}
+.pulse{animation:pulse 3s ease-in-out infinite}
+}</style>
+<defs><pattern id="sl" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1.4" class="f-tx" opacity=".045"/></pattern></defs>
+<rect width="800" height="172" rx="8" class="f-bg"/>
+<rect x="13" y="14" width="250" height="122" rx="6" class="f-pn s-ln"/>
+<circle cx="245" cy="32" r="5" class="f-gr led"/>
+<text x="29" y="70" font-size="44" class="f-gr b">--</text>
+<text x="29" y="98" font-size="18" class="f-tx">CURRENT</text>
+<text x="29" y="120" font-size="18" class="f-tx">STREAK</text><rect x="275" y="14" width="250" height="122" rx="6" class="f-pn s-ln"/>
+<circle cx="507" cy="32" r="5" class="f-gr led2"/>
+<text x="291" y="70" font-size="44" class="f-am b">--</text>
+<text x="291" y="98" font-size="18" class="f-tx">LONGEST STREAK</text>
+<text x="291" y="120" font-size="18" class="f-tx">LAST 12 MONTHS</text><rect x="537" y="14" width="250" height="122" rx="6" class="f-pn s-ln"/>
+<circle cx="769" cy="32" r="5" class="f-gr led3"/>
+<text x="553" y="70" font-size="44" class="f-cy b">--</text>
+<text x="553" y="98" font-size="18" class="f-tx">CONTRIBUTIONS</text>
+<text x="553" y="120" font-size="18" class="f-tx">LAST 12 MONTHS</text><text x="16" y="159" font-size="14" class="f-mu">AWAITING FIRST UPLINK · PUBLIC CONTRIBUTIONS ONLY</text>
+<rect width="800" height="172" rx="8" fill="url(#sl)"/>
+<rect class="scan f-cy" width="800" height="2" opacity=".18"/>
+<rect x=".5" y=".5" width="799" height="171" rx="8" fill="none" class="s-ln"/>
+</svg>

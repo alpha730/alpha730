@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" width="480" height="200" role="img" aria-labelledby="t d">
+<title id="t">Contact and links</title>
+<desc id="d">Contact panel: portfolio at https://aryan-kumar-portfolio-eight.vercel.app/ and GitHub at github.com/alpha730. End of transmission.</desc>
+<style>
+text{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+.b{font-weight:700}
+.f-bg{fill:#0b1020}.f-pn{fill:#121a38}.f-ln{fill:#1c2850}
+.f-tx{fill:#d6e2ff}.f-mu{fill:#8a99c4}
+.f-gr{fill:#39ff88}.f-am{fill:#ffb020}.f-cy{fill:#4cc9f0}
+.s-ln{stroke:#26335f}.s-mu{stroke:#8a99c4}
+.s-gr{stroke:#39ff88}.s-am{stroke:#ffb020}.s-cy{stroke:#4cc9f0}
+.scan{display:none}
+.cursor{opacity:0}
+/*LIGHT*/@media (prefers-color-scheme: light){
+.f-bg{fill:#f3f6ff}.f-pn{fill:#ffffff}.f-ln{fill:#e4eafb}
+.f-tx{fill:#0f1a3a}.f-mu{fill:#475687}
+.f-gr{fill:#007a38}.f-am{fill:#955700}.f-cy{fill:#0a6890}
+.s-ln{stroke:#c3cfee}.s-mu{stroke:#475687}
+.s-gr{stroke:#007a38}.s-am{stroke:#955700}.s-cy{stroke:#0a6890}
+}/*ENDLIGHT*/@media (prefers-reduced-motion: no-preference){
+@keyframes blink{0%,55%{opacity:1}70%,100%{opacity:.2}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes march{to{stroke-dashoffset:-36}}
+@keyframes scan{from{transform:translateY(-4px)}to{transform:translateY(200px)}}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+.led{animation:blink 2.2s infinite}.led2{animation:blink 2.2s .7s infinite}.led3{animation:blink 2.2s 1.4s infinite}
+.sp1{animation:spin 30s linear infinite}.sp2{animation:spin 48s linear infinite reverse}.sp3{animation:spin 20s linear infinite}
+.march{animation:march 2.4s linear infinite}
+.scan{display:block;animation:scan 7s linear infinite}
+.pulse{animation:pulse 3s ease-in-out infinite}
+}</style>
+<defs><pattern id="sl" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1.4" class="f-tx" opacity=".045"/></pattern></defs>
+<rect width="480" height="200" rx="8" class="f-bg"/>
+
+<text x="24" y="30" font-size="13" letter-spacing="2" class="f-am b">CONTACT // LINKS</text>
+<line x1="0" y1="42" x2="480" y2="42" class="s-ln"/>
+<text x="24" y="72" font-size="14" class="f-mu">PORTFOLIO</text>
+<text x="24" y="94" font-size="14" class="f-cy">https://aryan-kumar-portfolio-eight.vercel.app/</text>
+<text x="24" y="124" font-size="14" class="f-mu">GITHUB</text>
+<text x="24" y="146" font-size="14" class="f-cy">github.com/alpha730</text>
+<circle cx="30" cy="177" r="5" class="f-gr led"/>
+<text x="44" y="182" font-size="14" letter-spacing="2" class="f-gr">END OF TRANSMISSION</text>
+<circle cx="404" cy="140" r="24" class="f-pn s-cy" stroke-width="1.5"/>
+<ellipse cx="404" cy="140" rx="10.08" ry="24" fill="none" class="s-cy" opacity=".5"/>
+<ellipse cx="404" cy="140" rx="19.200000000000003" ry="24" fill="none" class="s-cy" opacity=".3"/>
+<line x1="380" y1="140" x2="428" y2="140" class="s-cy" opacity=".5"/>
+<line x1="383.216" y1="128" x2="424.784" y2="128" class="s-cy" opacity=".3"/>
+<line x1="383.216" y1="152" x2="424.784" y2="152" class="s-cy" opacity=".3"/>
+<g class="sp3" style="transform-origin:404px 140px"><circle cx="404" cy="140" r="42" fill="none" class="s-mu" stroke-dasharray="3 7" opacity=".55"/><circle cx="425.0" cy="103.6" r="5" class="f-am"/></g>
+<rect width="480" height="200" rx="8" fill="url(#sl)"/>
+<rect class="scan f-cy" width="480" height="2" opacity=".18"/>
+<rect x=".5" y=".5" width="479" height="199" rx="8" fill="none" class="s-ln"/>
+</svg>
