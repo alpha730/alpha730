@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 172" width="800" height="172" role="img" aria-labelledby="t d">
 <title id="t">Contribution streak</title>
-<desc id="d">Contribution streak panel, waiting for the first scheduled data refresh.</desc>
+<desc id="d">Current streak 2 days, longest streak in the last 12 months 5 days, 624 public contributions in the last 12 months.</desc>
 <style>
 text{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 .b{font-weight:700}
@@ -33,17 +33,17 @@ text{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 <rect width="800" height="172" rx="8" class="f-bg"/>
 <rect x="13" y="14" width="250" height="122" rx="6" class="f-pn s-ln"/>
 <circle cx="245" cy="32" r="5" class="f-gr led"/>
-<text x="29" y="70" font-size="44" class="f-gr b">--</text>
+<text x="29" y="70" font-size="44" class="f-gr b">2d</text>
 <text x="29" y="98" font-size="18" class="f-tx">CURRENT</text>
 <text x="29" y="120" font-size="18" class="f-tx">STREAK</text><rect x="275" y="14" width="250" height="122" rx="6" class="f-pn s-ln"/>
 <circle cx="507" cy="32" r="5" class="f-gr led2"/>
-<text x="291" y="70" font-size="44" class="f-am b">--</text>
+<text x="291" y="70" font-size="44" class="f-am b">5d</text>
 <text x="291" y="98" font-size="18" class="f-tx">LONGEST STREAK</text>
 <text x="291" y="120" font-size="18" class="f-tx">LAST 12 MONTHS</text><rect x="537" y="14" width="250" height="122" rx="6" class="f-pn s-ln"/>
 <circle cx="769" cy="32" r="5" class="f-gr led3"/>
-<text x="553" y="70" font-size="44" class="f-cy b">--</text>
+<text x="553" y="70" font-size="44" class="f-cy b">624</text>
 <text x="553" y="98" font-size="18" class="f-tx">CONTRIBUTIONS</text>
-<text x="553" y="120" font-size="18" class="f-tx">LAST 12 MONTHS</text><text x="16" y="159" font-size="14" class="f-mu">AWAITING FIRST UPLINK · PUBLIC CONTRIBUTIONS ONLY</text>
+<text x="553" y="120" font-size="18" class="f-tx">LAST 12 MONTHS</text><text x="16" y="159" font-size="14" class="f-mu">PUBLIC CONTRIBUTIONS ONLY · UPDATED 2026-10-29</text>
 <rect width="800" height="172" rx="8" fill="url(#sl)"/>
 <rect class="scan f-cy" width="800" height="2" opacity=".18"/>
 <rect x=".5" y=".5" width="799" height="171" rx="8" fill="none" class="s-ln"/>

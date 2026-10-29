@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 392 260" width="392" height="260" role="img" aria-labelledby="t d">
 <title id="t">Top languages</title>
-<desc id="d">Top languages panel, waiting for the first scheduled data refresh.</desc>
+<desc id="d">Top languages by share of code across public repositories: TypeScript 43.2%, Python 39.7%, JavaScript 8.9%, CSS 5.0%, HTML 3.1%, PowerShell 0.0%.</desc>
 <style>
 text{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 .b{font-weight:700}
@@ -10,7 +10,6 @@ text{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 .s-ln{stroke:#26335f}.s-mu{stroke:#8a99c4}
 .s-gr{stroke:#39ff88}.s-am{stroke:#ffb020}.s-cy{stroke:#4cc9f0}
 .scan{display:none}
-.cover{transform:translateX(2000px)}
 .cursor{opacity:0}
 /*LIGHT*/@media (prefers-color-scheme: light){
 .f-bg{fill:#f3f6ff}.f-pn{fill:#ffffff}.f-ln{fill:#e4eafb}
@@ -33,7 +32,25 @@ text{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 <defs><pattern id="sl" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1.4" class="f-tx" opacity=".045"/></pattern></defs>
 <rect width="392" height="260" rx="10" class="f-bg"/>
 <text x="18" y="30" font-size="12" letter-spacing="1.5" class="f-am b">LANGUAGES // PUBLIC REPOS</text>
-<line x1="18" y1="42" x2="374" y2="42" class="s-ln"/><text x="18" y="100" font-size="14" class="f-mu">AWAITING FIRST UPLINK</text><text x="18" y="246" font-size="12" class="f-mu">PUBLIC CONTRIBUTIONS ONLY</text>
+<line x1="18" y1="42" x2="374" y2="42" class="s-ln"/><text x="18" y="76" font-size="13" class="f-tx">TypeScript</text>
+<rect x="136" y="66" width="170" height="11" rx="3" class="f-ln"/>
+<rect x="136" y="66" width="170" height="11" rx="3" class="f-gr"/>
+<text x="374" y="76" font-size="13" text-anchor="end" class="f-mu">43.2%</text><text x="18" y="106" font-size="13" class="f-tx">Python</text>
+<rect x="136" y="96" width="170" height="11" rx="3" class="f-ln"/>
+<rect x="136" y="96" width="156" height="11" rx="3" class="f-cy"/>
+<text x="374" y="106" font-size="13" text-anchor="end" class="f-mu">39.7%</text><text x="18" y="136" font-size="13" class="f-tx">JavaScript</text>
+<rect x="136" y="126" width="170" height="11" rx="3" class="f-ln"/>
+<rect x="136" y="126" width="35" height="11" rx="3" class="f-cy"/>
+<text x="374" y="136" font-size="13" text-anchor="end" class="f-mu">8.9%</text><text x="18" y="166" font-size="13" class="f-tx">CSS</text>
+<rect x="136" y="156" width="170" height="11" rx="3" class="f-ln"/>
+<rect x="136" y="156" width="20" height="11" rx="3" class="f-cy"/>
+<text x="374" y="166" font-size="13" text-anchor="end" class="f-mu">5.0%</text><text x="18" y="196" font-size="13" class="f-tx">HTML</text>
+<rect x="136" y="186" width="170" height="11" rx="3" class="f-ln"/>
+<rect x="136" y="186" width="12" height="11" rx="3" class="f-cy"/>
+<text x="374" y="196" font-size="13" text-anchor="end" class="f-mu">3.1%</text><text x="18" y="226" font-size="13" class="f-tx">PowerShell</text>
+<rect x="136" y="216" width="170" height="11" rx="3" class="f-ln"/>
+<rect x="136" y="216" width="3" height="11" rx="3" class="f-cy"/>
+<text x="374" y="226" font-size="13" text-anchor="end" class="f-mu">0.0%</text><text x="18" y="246" font-size="12" class="f-mu">BY BYTES · UPDATED 2026-10-29</text>
 <rect width="392" height="260" rx="10" fill="url(#sl)"/>
 <rect class="scan f-cy" width="392" height="2" opacity=".18"/>
 <rect x=".5" y=".5" width="391" height="259" rx="10" fill="none" class="s-ln"/>
