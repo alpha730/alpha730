@@ -6,14 +6,14 @@ const CW = 6, CH = 10;
 const pack = (cv, C, R, center) => ({ values: cellsOf(cv, C, R, CW, CH), C, R, cw: CW, ch: CH, center });
 
 // Fill by a per-pixel function (max-blended), for textured masses.
-function field(cv, layer, x0, y0, x1, y1, fn) {
+export function field(cv, layer, x0, y0, x1, y1, fn) {
   const buf = cv.L(layer);
   for (let y = Math.max(0, y0); y < Math.min(cv.h, y1); y++)
     for (let x = Math.max(0, x0); x < Math.min(cv.w, x1); x++) cv.put(buf, x, y, 1, fn(x, y));
 }
 
 // Points along a quadratic Bezier.
-const qb = (p0, p1, p2, t) => [
+export const qb = (p0, p1, p2, t) => [
   (1 - t) ** 2 * p0[0] + 2 * (1 - t) * t * p1[0] + t * t * p2[0],
   (1 - t) ** 2 * p0[1] + 2 * (1 - t) * t * p1[1] + t * t * p2[1],
 ];
@@ -130,4 +130,15 @@ export function flyingRaven(pose) {
   cv.poly("ink", T(pose === 0 ? [[-6, 0], [-16, -15], [-2, -13], [8, -2]] : [[-4, 3], [-14, 14], [0, 11], [8, 3]]), 0.9);
   cv.ellipse("red", 78 + 4 * 2.1, 36 + 7 * 2.1, 6, 3.5, 0, 1);
   return pack(cv, C, R, { x: 78, y: 36 });
+}
+
+// The Forge: an anvil throwing red sparks. 14 x 8 cells.
+export function anvil() {
+  const C = 14, R = 8;
+  const cv = new Canvas(C * CW, R * CH);
+  const rnd = rng(606);
+  cv.poly("ink", [[6, 34], [62, 34], [62, 42], [78, 46], [62, 50], [56, 54], [52, 64], [62, 74], [18, 74], [28, 64], [24, 54], [14, 48], [6, 42]], 0.82);
+  field(cv, "ink", 0, 76, 84, 80, () => 0.4);
+  for (let i = 0; i < 9; i++) cv.disc("red", 40 + (rnd() - 0.5) * 44, 26 - rnd() * 24, 2 + rnd() * 2, 0.95);
+  return pack(cv, C, R, { x: 40, y: 30 });
 }

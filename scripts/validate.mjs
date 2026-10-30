@@ -13,7 +13,11 @@ const readme = await readFile(path.join(root, "README.md"), "utf8");
 if (/<\s*script/i.test(readme)) fail("README.md contains <script>");
 if (/<\s*style/i.test(readme)) fail("README.md contains <style>");
 if (/\son[a-z]+\s*=/i.test(readme.replace(/<!--[\s\S]*?-->/g, ""))) fail("README.md contains inline event handlers");
-if (!readme.includes("<!-- TODO: add metric -->")) fail("README.md is missing the TODO metric comment");
+// A project without a measured result keeps a visible TODO until one is filled in.
+const cfgJson = JSON.parse(await readFile(path.join(root, "profile.config.json"), "utf8"));
+const pending = cfgJson.missions.filter((m) => !m.result).length;
+const todos = (readme.match(/<!-- TODO: add metric -->/g) ?? []).length;
+if (todos !== pending) fail(`README.md has ${todos} TODO metric comment(s), expected ${pending} (one per project without a result)`);
 
 const imgs = [...readme.matchAll(/<img\b[^>]*>/gi)].map((m) => m[0]);
 if (!imgs.length) fail("no <img> tags found");

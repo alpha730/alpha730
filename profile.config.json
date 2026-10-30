@@ -5,55 +5,120 @@
     "portfolio": "https://aryan-kumar-portfolio-eight.vercel.app/",
     "role": "AI Engineer · Earth Observation · LLM Agent Safety"
   },
-  "ledger": [
-    { "value": "660", "label": ["EVALUATION", "RUNS"] },
-    { "value": "0/600", "label": ["HARMFUL", "ACTIONS"], "key": true },
-    { "value": "139", "label": ["AUTOMATED", "TESTS"] }
-  ],
   "missions": [
     {
       "banner": "I · THE WALL",
-      "emblem": "wall",
       "title": "Prompt-injection robustness study",
       "repo": "Prompt-injection-Tester-",
       "description": "LangGraph agent (Qwen via Groq) answering remote-sensing questions over Sentinel-2 NDVI, Sentinel-1 water extent and ERA5 rainfall for 6 Indian regions. 20 tasks, 5 injection styles (incl. Hindi), 2 defenses, 660 runs.",
       "result": "0 of 600 attacked runs led to a harmful action. Task success 96.5-100%.",
-      "stack": ["LangGraph", "Qwen via Groq", "Sentinel-1/2", "ERA5"]
+      "stack": [
+        "LangGraph",
+        "Qwen via Groq",
+        "Sentinel-1/2",
+        "ERA5"
+      ],
+      "chapter": "wall",
+      "keyFact": "0/600 HARMFUL ACTIONS"
     },
     {
       "banner": "II · THE RAVEN'S EYE",
-      "emblem": "raven",
       "title": "AI-Powered Remote Sensing Analysis Platform",
       "repo": "sih-project",
       "description": "Agentic Earth-observation system on SAR + optical imagery with visual question answering (VQA).",
       "result": null,
-      "stack": ["Python", "PyTorch", "LangGraph", "Rasterio"]
+      "stack": [
+        "Python",
+        "PyTorch",
+        "LangGraph",
+        "Rasterio"
+      ],
+      "chapter": "raven",
+      "keyFact": "SAR + OPTICAL · VQA"
     },
     {
       "banner": "III · THE HORN",
-      "emblem": "horn",
       "title": "ASHA Voice Logging Agent",
       "repo": "ASHA-Voice-Logging-Agent",
       "description": "Multilingual (Hindi, English, Marwari) voice agent turning home-visit reports into structured health records. Sarvam Saaras v3 STT, LLM extraction, Supabase. Safety-first IMNCI triage with a deterministic, source-cited rules engine.",
       "result": "139 automated tests",
-      "stack": ["Next.js", "TypeScript", "Supabase", "Sarvam Saaras v3"]
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "Sarvam Saaras v3"
+      ],
+      "chapter": "horn",
+      "keyFact": "139 AUTOMATED TESTS"
     },
     {
       "banner": "IV · DRAGONFIRE",
-      "emblem": "dragon",
       "title": "Decade Hunt: Duolingo English Test AR game",
       "repo": "DUO-Game",
       "description": "AR game for Duolingo's 10-year campaign. Scan posters to catch \"Lingos\"; level system with streaks.",
       "result": "Played at a campus event on Oct 22, 2026",
-      "stack": ["React", "TypeScript", "MindAR", "Firebase"]
+      "stack": [
+        "React",
+        "TypeScript",
+        "MindAR",
+        "Firebase"
+      ],
+      "chapter": "dragon",
+      "keyFact": "PLAYED OCT 22, 2026"
     }
   ],
-  "citadel": [
-    { "label": "Languages", "items": ["Python", "Java"] },
-    { "label": "ML/DL", "items": ["PyTorch", "scikit-learn"] },
-    { "label": "LLMs & Agents", "items": ["LangGraph", "LangChain", "CrewAI", "RAG", "vector DBs"] },
-    { "label": "Geospatial", "items": ["Rasterio/GDAL", "GeoPandas", "Sentinel-1/2", "STAC"] },
-    { "label": "Web", "items": ["React", "Node.js", "Next.js", "TypeScript"] },
-    { "label": "Tools", "items": ["Git", "Supabase", "Vercel", "Render", "n8n"] }
+  "forge": [
+    {
+      "label": "Languages",
+      "items": [
+        "Python",
+        "Java"
+      ]
+    },
+    {
+      "label": "ML/DL",
+      "items": [
+        "PyTorch",
+        "scikit-learn"
+      ]
+    },
+    {
+      "label": "LLMs & Agents",
+      "items": [
+        "LangGraph",
+        "LangChain",
+        "CrewAI",
+        "RAG",
+        "vector DBs"
+      ]
+    },
+    {
+      "label": "Geospatial",
+      "items": [
+        "Rasterio/GDAL",
+        "GeoPandas",
+        "Sentinel-1/2",
+        "STAC"
+      ]
+    },
+    {
+      "label": "Web",
+      "items": [
+        "React",
+        "Node.js",
+        "Next.js",
+        "TypeScript"
+      ]
+    },
+    {
+      "label": "Tools",
+      "items": [
+        "Git",
+        "Supabase",
+        "Vercel",
+        "Render",
+        "n8n"
+      ]
+    }
   ]
 }
