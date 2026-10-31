@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 392 292" width="392" height="292" role="img" aria-labelledby="t d">
 <title id="t">Top languages</title>
-<desc id="d">Top languages by share of code across public repositories: TypeScript 43.0%, Python 39.4%, JavaScript 9.5%, CSS 5.0%, HTML 3.1%, PowerShell 0.0%.</desc>
+<desc id="d">Top languages by share of code across public repositories: TypeScript 42.8%, Python 39.3%, JavaScript 9.8%, CSS 5.0%, HTML 3.1%, PowerShell 0.0%.</desc>
 <style>
 text{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 .b{font-weight:700}
@@ -16,16 +16,16 @@ text{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 <rect width="392" height="292" rx="8" class="bg"/>
 <text x="18" y="32" font-size="13" letter-spacing="1.5" class="ink b">LANGUAGES · PUBLIC REPOS</text><text x="18" y="76" font-size="13" class="ink">TypeScript</text>
 <g class="ink" font-size="10" xml:space="preserve"><text x="130" y="75" textLength="156" lengthAdjust="spacing" class="rd">#%#%#%#%#%#%#%#%#%#%#%#%#%</text></g>
-<text x="374" y="76" font-size="13" text-anchor="end" class="mu">43.0%</text><text x="18" y="108" font-size="13" class="ink">Python</text>
+<text x="374" y="76" font-size="13" text-anchor="end" class="mu">42.8%</text><text x="18" y="108" font-size="13" class="ink">Python</text>
 <g class="ink" font-size="10" xml:space="preserve"><text x="130" y="107" textLength="156" lengthAdjust="spacing">#%#%#%#%#%#%#%#%#%#%#%#+ .</text></g>
-<text x="374" y="108" font-size="13" text-anchor="end" class="mu">39.4%</text><text x="18" y="140" font-size="13" class="ink">JavaScript</text>
+<text x="374" y="108" font-size="13" text-anchor="end" class="mu">39.3%</text><text x="18" y="140" font-size="13" class="ink">JavaScript</text>
 <g class="ink" font-size="10" xml:space="preserve"><text x="130" y="139" textLength="156" lengthAdjust="spacing">#%#%#+.. ... ... ... ... .</text></g>
-<text x="374" y="140" font-size="13" text-anchor="end" class="mu">9.5%</text><text x="18" y="172" font-size="13" class="ink">CSS</text>
+<text x="374" y="140" font-size="13" text-anchor="end" class="mu">9.8%</text><text x="18" y="172" font-size="13" class="ink">CSS</text>
 <g class="ink" font-size="10" xml:space="preserve"><text x="130" y="171" textLength="156" lengthAdjust="spacing">#%#+ ... ... ... ... ... .</text></g>
 <text x="374" y="172" font-size="13" text-anchor="end" class="mu">5.0%</text><text x="18" y="204" font-size="13" class="ink">HTML</text>
 <g class="ink" font-size="10" xml:space="preserve"><text x="130" y="203" textLength="156" lengthAdjust="spacing">#+.. ... ... ... ... ... .</text></g>
 <text x="374" y="204" font-size="13" text-anchor="end" class="mu">3.1%</text><text x="18" y="236" font-size="13" class="ink">PowerShell</text>
 <g class="ink" font-size="10" xml:space="preserve"><text x="130" y="235" textLength="156" lengthAdjust="spacing">=... ... ... ... ... ... .</text></g>
-<text x="374" y="236" font-size="13" text-anchor="end" class="mu">&lt;0.1%</text><text x="18" y="276" font-size="13" class="mu">BY BYTES · 2026-10-30</text>
+<text x="374" y="236" font-size="13" text-anchor="end" class="mu">&lt;0.1%</text><text x="18" y="276" font-size="13" class="mu">BY BYTES · 2026-10-31</text>
 <rect x=".5" y=".5" width="391" height="291" rx="8" fill="none" class="s-ink" opacity=".22"/>
 </svg>

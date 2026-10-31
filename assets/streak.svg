@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 266" width="800" height="266" role="img" aria-labelledby="t d">
 <title id="t">Contribution streak</title>
-<desc id="d">Current streak 2 days, longest streak in the last 12 months 5 days, 625 public contributions in the last 12 months.</desc>
+<desc id="d">Current streak 1 days, longest streak in the last 12 months 5 days, 631 public contributions in the last 12 months.</desc>
 <style>
 text{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 .b{font-weight:700}
@@ -16,19 +16,19 @@ text{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 <rect width="800" height="266" rx="8" class="bg"/>
 <g class="wd"><text x="24" y="42" font-size="22" letter-spacing="2" class="ink b">THE UNBROKEN WATCH</text>
 <rect x="12.5" y="62.5" width="248" height="116" rx="4" fill="none" class="s-ink" opacity=".3"/>
-<text x="30" y="126" font-size="50" class="rd b">2d</text>
+<text x="30" y="126" font-size="50" class="rd b">1d</text>
 <text x="30" y="162" font-size="22" class="mu">CURRENT STREAK</text>
 <rect x="276.5" y="62.5" width="248" height="116" rx="4" fill="none" class="s-ink" opacity=".3"/>
 <text x="294" y="126" font-size="50" class="ink b">5d</text>
 <text x="294" y="162" font-size="22" class="mu">LONGEST STREAK</text>
 <rect x="540.5" y="62.5" width="248" height="116" rx="4" fill="none" class="s-ink" opacity=".3"/>
-<text x="558" y="126" font-size="50" class="ink b">625</text>
-<text x="558" y="162" font-size="22" class="mu">CONTRIBUTIONS</text><text x="24" y="226" font-size="22" class="mu">LAST 12 MONTHS · PUBLIC CONTRIBUTIONS ONLY · 2026-10-30</text></g><g class="nw"><text x="24" y="46" font-size="30" letter-spacing="1" class="ink b">THE UNBROKEN WATCH</text>
-<text x="24" y="96" font-size="42" class="rd b">2d</text>
+<text x="558" y="126" font-size="50" class="ink b">631</text>
+<text x="558" y="162" font-size="22" class="mu">CONTRIBUTIONS</text><text x="24" y="226" font-size="22" class="mu">LAST 12 MONTHS · PUBLIC CONTRIBUTIONS ONLY · 2026-10-31</text></g><g class="nw"><text x="24" y="46" font-size="30" letter-spacing="1" class="ink b">THE UNBROKEN WATCH</text>
+<text x="24" y="96" font-size="42" class="rd b">1d</text>
 <text x="232" y="96" font-size="28" class="mu">CURRENT STREAK</text>
 <text x="24" y="140" font-size="42" class="ink b">5d</text>
 <text x="232" y="140" font-size="28" class="mu">LONGEST STREAK</text>
-<text x="24" y="184" font-size="42" class="ink b">625</text>
-<text x="232" y="184" font-size="28" class="mu">CONTRIBUTIONS</text><text x="24" y="226" font-size="26" class="mu">LAST 12 MONTHS · PUBLIC CONTRIBUTIONS ONLY</text><text x="24" y="256" font-size="26" class="mu">2026-10-30</text></g><circle cx="772" cy="34" r="6" class="rd led"/>
+<text x="24" y="184" font-size="42" class="ink b">631</text>
+<text x="232" y="184" font-size="28" class="mu">CONTRIBUTIONS</text><text x="24" y="226" font-size="26" class="mu">LAST 12 MONTHS · PUBLIC CONTRIBUTIONS ONLY</text><text x="24" y="256" font-size="26" class="mu">2026-10-31</text></g><circle cx="772" cy="34" r="6" class="rd led"/>
 <rect x=".5" y=".5" width="799" height="265" rx="8" fill="none" class="s-ink" opacity=".22"/>
 </svg>
