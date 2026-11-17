@@ -18,8 +18,9 @@
         "Sentinel-1/2",
         "ERA5"
       ],
-      "chapter": "wall",
-      "keyFact": "0/600 HARMFUL ACTIONS"
+      "art": "wall.png",
+      "artAlt": "Pixel art: a towering wall of ice at night with torches along the top, arrows stuck in the ice and a dark pine forest at its foot",
+      "blurb": "Prompt-injection robustness study. 600 attacked runs, none led to a harmful action. Task success 96.5–100%."
     },
     {
       "banner": "II · THE RAVEN'S EYE",
@@ -33,11 +34,12 @@
         "LangGraph",
         "Rasterio"
       ],
-      "chapter": "raven",
-      "keyFact": "SAR + OPTICAL · VQA"
+      "art": "raven.png",
+      "artAlt": "Pixel art: a black raven with a red eye perched on a branch in front of a full moon",
+      "blurb": "Agentic Earth-observation platform: SAR + optical imagery with visual question answering."
     },
     {
-      "banner": "III · THE HORN",
+      "banner": "III · THE SEALED SCROLL",
       "title": "ASHA Voice Logging Agent",
       "repo": "ASHA-Voice-Logging-Agent",
       "description": "Multilingual (Hindi, English, Marwari) voice agent turning home-visit reports into structured health records. Sarvam Saaras v3 STT, LLM extraction, Supabase. Safety-first IMNCI triage with a deterministic, source-cited rules engine.",
@@ -48,8 +50,9 @@
         "Supabase",
         "Sarvam Saaras v3"
       ],
-      "chapter": "horn",
-      "keyFact": "139 AUTOMATED TESTS"
+      "art": "scroll.png",
+      "artAlt": "Pixel art: an unrolled parchment scroll with handwriting and a red wax seal, a quill and a lit candle on a wooden table",
+      "blurb": "Voice agent turning Hindi, English and Marwari home-visit reports into sealed, structured health records."
     },
     {
       "banner": "IV · DRAGONFIRE",
@@ -63,27 +66,34 @@
         "MindAR",
         "Firebase"
       ],
-      "chapter": "dragon",
-      "keyFact": "PLAYED OCT 22, 2026"
+      "art": "dragon.png",
+      "artAlt": "Pixel art: a dragon with red wings breathing a jet of fire over dark mountains at dusk, framed by AR viewfinder corners",
+      "blurb": "AR game for Duolingo's 10-year campaign, played at a campus event. Scan posters, catch Lingos."
     }
   ],
-  "forge": [
+  "chain": [
     {
-      "label": "Languages",
+      "label": "LANGUAGES",
+      "metal": "iron",
+      "color": "#5c5c62",
       "items": [
         "Python",
         "Java"
       ]
     },
     {
-      "label": "ML/DL",
+      "label": "ML / DL",
+      "metal": "bronze",
+      "color": "#96582a",
       "items": [
         "PyTorch",
         "scikit-learn"
       ]
     },
     {
-      "label": "LLMs & Agents",
+      "label": "LLMS & AGENTS",
+      "metal": "gold",
+      "color": "#b0842a",
       "items": [
         "LangGraph",
         "LangChain",
@@ -93,7 +103,9 @@
       ]
     },
     {
-      "label": "Geospatial",
+      "label": "GEOSPATIAL",
+      "metal": "silver",
+      "color": "#96989e",
       "items": [
         "Rasterio/GDAL",
         "GeoPandas",
@@ -102,7 +114,9 @@
       ]
     },
     {
-      "label": "Web",
+      "label": "WEB",
+      "metal": "black iron",
+      "color": "#2c2c32",
       "items": [
         "React",
         "Node.js",
@@ -111,7 +125,9 @@
       ]
     },
     {
-      "label": "Tools",
+      "label": "TOOLS",
+      "metal": "copper",
+      "color": "#a04c28",
       "items": [
         "Git",
         "Supabase",

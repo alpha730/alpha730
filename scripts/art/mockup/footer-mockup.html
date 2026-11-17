@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Doodle footer</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&display=swap">
+<style>
+body{margin:0}
+a{color:#111111}a:hover{color:#000000}
+@keyframes drift{0%{transform:translate(0,0) rotate(0deg);opacity:0}12%{opacity:1}100%{transform:translate(-20px,210px) rotate(160deg);opacity:0}}
+.dr{transform-box:fill-box;transform-origin:center;animation:drift 11s linear infinite}
+@keyframes bob{50%{transform:translateY(-4px)}}
+.bob{animation:bob 2.8s ease-in-out infinite}
+@keyframes glow{50%{opacity:.08}}
+.gl{animation:glow 1.8s ease-in-out infinite}
+@keyframes puff{0%{transform:translate(0,0);opacity:.9}100%{transform:translate(10px,-18px);opacity:0}}
+.pf{transform-box:fill-box;animation:puff 2.4s ease-out infinite}
+@media (prefers-reduced-motion:reduce){.dr,.bob,.gl,.pf{animation:none}}
+</style>
+</helmet>
+<div style="width: 880px; height: 480px; box-sizing: border-box; padding: 40px; background-color: #ece2c4; background-image: radial-gradient(#d8cca8 1px, transparent 1.3px); background-size: 8px 8px; color: #111111; font-family: 'Comic Neue', 'Comic Sans MS', sans-serif">
+
+<footer style="height: 400px; box-sizing: border-box; border: 4px solid #111111; box-shadow: 6px 6px 0 #111111; background-color: #f7f1df; background-image: repeating-linear-gradient(transparent 0 27px, rgba(47, 111, 154, 0.16) 27px 28px); overflow: hidden; display: flex; flex-direction: column">
+
+<div style="padding: 20px 24px 0; display: flex; justify-content: space-between; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-family: Bangers, Impact, sans-serif; font-size: 34px; line-height: 1; letter-spacing: 2px">SEND A RAVEN.</div>
+<div style="display: flex; gap: 12px">
+<a href="https://aryan-kumar-portfolio-eight.vercel.app/" style="background: #f5c842; border: 3px solid #111111; border-radius: 999px; box-shadow: 3px 3px 0 #111111; padding: 8px 18px; font-family: Bangers, Impact, sans-serif; font-size: 18px; letter-spacing: 1.5px; text-decoration: none">PORTFOLIO</a>
+<a href="https://github.com/alpha730" style="background: #f7f1df; border: 3px solid #111111; border-radius: 999px; box-shadow: 3px 3px 0 #111111; padding: 8px 18px; font-family: Bangers, Impact, sans-serif; font-size: 18px; letter-spacing: 1.5px; text-decoration: none">GITHUB</a>
+</div>
+</div>
+<div style="display: flex; gap: 40px; font-size: 15px; line-height: 1.6">
+<div style="display: flex; flex-direction: column">
+<span style="font-family: Bangers, Impact, sans-serif; font-size: 17px; letter-spacing: 1.5px; color: {{accent}}">THE CHAPTERS</span>
+<a href="https://github.com/alpha730/Prompt-injection-Tester-">I · The Wall</a>
+<a href="https://github.com/alpha730/sih-project">II · The Raven's Eye</a>
+<a href="https://github.com/alpha730/ASHA-Voice-Logging-Agent">III · The Horn</a>
+<a href="https://github.com/alpha730/DUO-Game">IV · Dragonfire</a>
+</div>
+<div style="display: flex; flex-direction: column">
+<span style="font-family: Bangers, Impact, sans-serif; font-size: 17px; letter-spacing: 1.5px; color: {{accent}}">RAVENS</span>
+<a href="https://aryan-kumar-portfolio-eight.vercel.app/">Portfolio</a>
+<a href="https://github.com/alpha730">GitHub</a>
+</div>
+</div>
+</div>
+
+<svg viewBox="0 0 792 222" width="792" height="222" role="img" aria-label="The name alpha730 in giant dry-brush ink letters, with a raven, a wolf pup, a hooded watchman with a lantern and a small dragon sitting on top of the letters" style="display: block; flex: none; color: {{accent}}">
+<defs>
+<filter id="dry" x="-5%" y="-5%" width="110%" height="110%">
+<feTurbulence type="fractalNoise" baseFrequency="0.015 0.55" numOctaves="2" seed="4" result="n"/>
+<feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -3 0 0 0 2.25" result="streak"/>
+<feComposite in="SourceGraphic" in2="streak" operator="in" result="s"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="7" result="r"/>
+<feDisplacementMap in="s" in2="r" scale="3.5"/>
+</filter>
+</defs>
+
+<g fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round">
+<g transform="translate(110,6)"><path class="dr" d="M0 -7 V7 M-6 -4 L6 4 M-6 4 L6 -4"/></g>
+<g transform="translate(250,14)"><path class="dr" style="animation-delay: 2.2s" d="M0 0 C4 -5 10 -5 12 0 C10 5 4 5 0 0 Z" fill="currentColor"/></g>
+<g transform="translate(420,4)"><path class="dr" style="animation-delay: 4.4s" d="M0 -8 L2 -2 L8 0 L2 2 L0 8 L-2 2 L-8 0 L-2 -2 Z"/></g>
+<g transform="translate(600,10)"><path class="dr" style="animation-delay: 6.1s" d="M0 -7 V7 M-6 -4 L6 4 M-6 4 L6 -4"/></g>
+<g transform="translate(690,2)"><path class="dr" style="animation-delay: 8.3s" d="M0 0 C4 -5 10 -5 12 0 C10 5 4 5 0 0 Z" fill="currentColor"/></g>
+<g transform="translate(180,0)"><path class="dr" style="animation-delay: 9.4s" d="M-8 6 L6 -8 M3 -8 H6 V-5 M-6 1 L-1 6"/></g>
+<g transform="translate(330,8)"><path class="dr" style="animation-delay: 5.3s" d="M0 -6 C3 -6 5 -3 5 0 C5 3 3 6 0 6 C3 4 3 -4 0 -6 Z"/></g>
+</g>
+
+<g filter="url(#dry)" font-family="Bangers, Impact, sans-serif" font-size="172" fill="#111111">
+<text x="24" y="206">A</text><text x="118" y="206">L</text><text x="212" y="206">P</text><text x="306" y="206">H</text><text x="400" y="206">A</text><text x="494" y="206">7</text><text x="588" y="206">3</text><text x="682" y="206">0</text>
+</g>
+
+<g transform="translate(66,82)"><g class="bob">
+<path d="M-12 -10 L-28 -2 L-12 -20 Z" fill="#111111"/>
+<ellipse cx="0" cy="-16" rx="14" ry="12" fill="#111111"/>
+<circle cx="9" cy="-32" r="8" fill="#111111"/>
+<path d="M16 -34 L27 -30 L16 -27 Z" fill="#111111"/>
+<circle cx="11" cy="-34" r="1.8" fill="currentColor"/>
+<path d="M-3 -5 V0 M4 -5 V0" stroke="#111111" stroke-width="2.5" stroke-linecap="round"/>
+</g></g>
+
+<g transform="translate(348,84)">
+<path d="M14 -4 C30 -4 34 -18 26 -28 C28 -16 22 -11 14 -11" fill="#c9c2b0" stroke="#111111" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M-16 0 C-18 -20 -10 -34 0 -36 C10 -34 18 -20 16 0 Z" fill="#c9c2b0" stroke="#111111" stroke-width="2.5"/>
+<path d="M-8 -14 Q0 -8 8 -14" fill="none" stroke="#111111" stroke-width="1.5"/>
+<g class="bob">
+<path d="M-12 -34 L-14 -54 L-5 -45 L5 -45 L14 -54 L12 -34 C10 -26 4 -22 0 -22 C-4 -22 -10 -26 -12 -34 Z" fill="#c9c2b0" stroke="#111111" stroke-width="2.5" stroke-linejoin="round"/>
+<ellipse cx="0" cy="-28" rx="5.5" ry="4" fill="#f7f1df" stroke="#111111" stroke-width="2"/>
+<circle cx="0" cy="-30" r="1.8" fill="#111111"/>
+<circle cx="-5" cy="-38" r="1.8" fill="#111111"/><circle cx="5" cy="-38" r="1.8" fill="#111111"/>
+</g>
+</g>
+
+<g transform="translate(540,84)">
+<circle class="gl" cx="23" cy="-12" r="14" fill="#f5c842" opacity="0.3"/>
+<path d="M-14 0 C-16 -18 -12 -34 0 -42 C12 -34 16 -18 14 0 Z" fill="#111111"/>
+<ellipse cx="0" cy="-30" rx="5.5" ry="6.5" fill="#f7f1df" stroke="#111111" stroke-width="1.5"/>
+<circle cx="-2" cy="-31" r="1.2" fill="#111111"/><circle cx="2.4" cy="-31" r="1.2" fill="#111111"/>
+<path d="M8 -16 L19 -16" stroke="#111111" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="18" y="-18" width="10" height="12" rx="2" fill="#f5c842" stroke="#111111" stroke-width="2"/>
+</g>
+
+<g transform="translate(720,86)">
+<path d="M-26 0 C-34 2 -40 -8 -31 -11" fill="none" stroke="#111111" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M-4 -20 L-14 -46 L2 -34 L8 -50 L12 -26 Z" fill="#7a1018" stroke="#111111" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M-26 0 C-28 -16 -12 -24 4 -20 C18 -17 26 -8 24 0 Z" fill="currentColor" stroke="#111111" stroke-width="2.5"/>
+<path d="M-14 -4 v-4 M-4 -4 v-5 M6 -4 v-4" stroke="#111111" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M18 -12 C26 -22 34 -24 40 -18 L45 -16 L38 -10 C32 -8 26 -6 22 -4 Z" fill="currentColor" stroke="#111111" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="34" cy="-17" r="1.8" fill="#111111"/>
+<circle class="pf" cx="50" cy="-22" r="4" fill="#f7f1df" stroke="#111111" stroke-width="1.5"/>
+<circle class="pf" cx="56" cy="-30" r="3" fill="#f7f1df" stroke="#111111" stroke-width="1.5" style="animation-delay: 1.2s"/>
+</g>
+</svg>
+
+<div style="margin-top: auto; border-top: 3px solid #111111; padding: 10px 24px; display: flex; justify-content: space-between; gap: 16px; font-size: 14px; background: #f7f1df">
+<span>© 2026 Aryan Kumar</span>
+<span>AI Engineer · Earth Observation · LLM Agent Safety</span>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#c41e2a","options":["#c41e2a","#2f6f9a","#2f7d4a"]},"$preview":{"width":880,"height":480}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#c41e2a' };
+}
+}
+</script>
+</body>
+</html>

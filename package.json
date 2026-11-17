@@ -6,9 +6,11 @@
     "build": "node scripts/build.mjs",
     "live": "node scripts/live-stats.mjs",
     "render": "node scripts/render-check.mjs",
-    "validate": "node scripts/validate.mjs"
+    "validate": "node scripts/validate.mjs",
+    "glyphs": "node scripts/art/build-glyphs.mjs"
   },
   "devDependencies": {
-    "@resvg/resvg-js": "2.6.2"
+    "@resvg/resvg-js": "2.6.2",
+    "opentype.js": "1.3.4"
   }
 }

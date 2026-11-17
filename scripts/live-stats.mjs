@@ -1,10 +1,10 @@
-// Regenerates assets/{streak,languages,activity}.svg from the GitHub API.
+// Regenerates assets/{watch,languages,activity}.svg from the GitHub API.
 // Auth: GITHUB_TOKEN from the environment only (the Action's built-in token).
 // With that token, contribution data covers PUBLIC contributions only.
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-import { streakSvg, langSvg, activitySvg } from "./lib/live.mjs";
+import { watchSvg, langSvg, activitySvg } from "./lib/live.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cfg = JSON.parse(await readFile(path.join(root, "profile.config.json"), "utf8"));
@@ -40,27 +40,15 @@ async function gql(query, variables) {
 
 const today = new Date().toISOString().slice(0, 10);
 
-// --- contributions: streak + activity ---
+// --- contributions: weekly torches (52 weeks) + activity (26 weeks) ---
 const data = await gql(
   `query($login:String!){user(login:$login){contributionsCollection{contributionCalendar{
      totalContributions weeks{contributionDays{date contributionCount}}}}}}`,
   { login },
 );
 const cal = data.user.contributionsCollection.contributionCalendar;
-const days = cal.weeks.flatMap((w) => w.contributionDays).filter((d) => d.date <= today);
-
-let longest = 0, run = 0;
-for (const d of days) {
-  run = d.contributionCount > 0 ? run + 1 : 0;
-  longest = Math.max(longest, run);
-}
-let current = 0;
-for (let i = days.length - 1; i >= 0; i--) {
-  if (days[i].contributionCount > 0) current++;
-  else if (i === days.length - 1) continue; // today may not be done yet
-  else break;
-}
-const weekly = cal.weeks.map((w) => w.contributionDays.reduce((a, d) => a + d.contributionCount, 0)).slice(-26);
+const allWeeks = cal.weeks.map((w) => w.contributionDays.reduce((a, d) => a + d.contributionCount, 0));
+const weekly = allWeeks.slice(-26);
 
 // --- languages across public, non-fork repos ---
 const repos = (await rest(`https://api.github.com/users/${login}/repos?per_page=100&type=owner`)).filter((r) => !r.fork);
@@ -79,12 +67,12 @@ const out = path.join(root, "assets");
 await mkdir(out, { recursive: true });
 // Raw numbers are kept beside the SVGs so a theme rebuild (build.mjs) can re-render them offline.
 const live = {
-  streak: { current, longest, total: cal.totalContributions, date: today },
+  watch: { total: cal.totalContributions, weeks: allWeeks.slice(-52), date: today },
   languages: { rows, date: today },
   activity: { weeks: weekly, total: weekly.reduce((a, b) => a + b, 0), date: today },
 };
 await writeFile(path.join(out, "live-data.json"), JSON.stringify(live, null, 2) + "\n");
-await writeFile(path.join(out, "streak.svg"), streakSvg(live.streak));
+await writeFile(path.join(out, "watch.svg"), watchSvg(live.watch));
 await writeFile(path.join(out, "languages.svg"), langSvg(live.languages));
 await writeFile(path.join(out, "activity.svg"), activitySvg(live.activity));
-console.log(`live stats refreshed for ${login}: streak ${current}/${longest}, ${rows.length} languages`);
+console.log(`live stats refreshed for ${login}: ${cal.totalContributions} contributions, ${rows.length} languages`);

@@ -34,23 +34,32 @@ for (const t of imgs) {
 }
 
 // ---- assets ----
-const HERO_CAP = 150 * 1024, CAP = 60 * 1024;
+// The comic design: exactly these SVGs (plus live-data.json), nothing left from earlier designs.
+const EXPECTED = ["hero.svg", "chapters-title.svg", "chapter-1.svg", "chapter-2.svg", "chapter-3.svg", "chapter-4.svg",
+  "chain.svg", "watch.svg", "languages.svg", "activity.svg", "footer.svg"];
+const HERO_CAP = 150 * 1024, CAP = 90 * 1024;
+const PHONE = 330; // GitHub's README width on a ~360px phone
 const dir = path.join(root, "assets");
+const present = (await readdir(dir)).filter((f) => f.endsWith(".svg"));
+for (const f of EXPECTED) if (!present.includes(f)) fail(`assets/${f} is missing`);
+for (const f of present) if (!EXPECTED.includes(f)) fail(`assets/${f} is not part of the design (remove it or add it to EXPECTED)`);
 const svgs = {};
-for (const f of await readdir(dir)) {
-  if (!f.endsWith(".svg")) continue;
+for (const f of present) {
   const p = path.join(dir, f);
   const size = (await stat(p)).size;
-  const cap = f === "header.svg" ? HERO_CAP : CAP;
+  const cap = f === "hero.svg" ? HERO_CAP : CAP;
   if (size > cap) fail(`${f} is ${size} bytes (cap ${cap})`);
   const s = await readFile(p, "utf8");
   svgs[f] = s;
   if (/<script/i.test(s)) fail(`${f} contains <script>`);
+  // GitHub serves README SVGs as images, which cannot load fonts: all text must be paths
+  if (/<text\b/.test(s)) fail(`${f} contains <text>; text must be converted to paths`);
+  if (/@font-face|font-family/i.test(s)) fail(`${f} relies on a font`);
   const [w] = (/viewBox="0 0 ([\d.]+)/.exec(s) ?? [, 0]).slice(1).map(Number);
   if (!w || w > 800) fail(`${f} width ${w} is missing or >800`);
   if (!/<title id="t">[^<]+/.test(s) || !/<desc id="d">[^<]+/.test(s)) fail(`${f} lacks <title>/<desc>`);
-  if (!s.includes("prefers-color-scheme: light")) fail(`${f} lacks a light-mode rule`);
   if (/(?:href|src)="https?:|url\(\s*["']?https?:|@import/i.test(s)) fail(`${f} references an external resource`);
+  for (const m of s.matchAll(/href="data:([^;,]+)/g)) if (m[1] !== "image/png") fail(`${f} embeds ${m[1]} (only PNG pixel art is expected)`);
 
   // every animation must live inside the reduced-motion guard
   const guard = s.indexOf("@media (prefers-reduced-motion: no-preference)");
@@ -58,32 +67,34 @@ for (const f of await readdir(dir)) {
   if (/animation\s*:|@keyframes/.test(outside)) fail(`${f} has animation outside the prefers-reduced-motion guard`);
   if (guard < 0 && /animation/.test(s)) fail(`${f} animates without a reduced-motion rule`);
 
-  // Real text must stay >= 10px at GitHub's phone width (~330px shown). Text in a
-  // wide-only (.wd) element or group is hidden below 520px, so it is checked at 521px.
-  // ASCII art sets its size on a <g>, so only <text font-size> is checked.
-  const PHONE = 330;
+  // Real text must stay >= 10px at GitHub's phone width. Each text run records its
+  // displayed size in data-fs. Wide-only (.wd) text is hidden at or below the SVG's
+  // own narrow breakpoint, so it is checked just above that width.
+  const bp = Number(/@media \(max-width: (\d+)px\)/.exec(s)?.[1] ?? 0);
   const wideRanges = [];
   for (const g of s.matchAll(/<g class="[^"]*\bwd\b[^"]*">/g)) {
-    let depth = 0, i = g.index;
+    let depth = 0;
     const re = /<g\b|<\/g>/g;
-    re.lastIndex = i;
+    re.lastIndex = g.index;
     for (let t; (t = re.exec(s)); ) {
       depth += t[0] === "</g>" ? -1 : 1;
-      if (!depth) { wideRanges.push([i, t.index]); break; }
+      if (!depth) { wideRanges.push([g.index, t.index]); break; }
     }
   }
-  for (const m of s.matchAll(/<text\b[^>]*\bfont-size="([\d.]+)"[^>]*>/g)) {
-    const wideOnly = /class="[^"]*\bwd\b/.test(m[0]) || wideRanges.some(([a, b]) => m.index > a && m.index < b);
-    const shown = wideOnly ? 521 : PHONE;
+  let runs = 0;
+  for (const m of s.matchAll(/<g data-fs="([\d.]+)"([^>]*)>/g)) {
+    runs++;
+    const wideOnly = /class="[^"]*\bwd\b/.test(m[2]) || wideRanges.some(([a, b]) => m.index > a && m.index < b);
+    const shown = wideOnly && bp ? bp + 1 : PHONE;
     const px = (Number(m[1]) * Math.min(shown, w)) / w;
     if (px < 10) {
       fail(`${f}: ${m[1]}px text is ${px.toFixed(1)}px when shown ${shown}px wide`);
       break;
     }
   }
-  if (!used.has(`assets/${f}`)) console.warn(`note: assets/${f} is not referenced by README.md`);
+  if (!runs) fail(`${f} has no measurable text runs (data-fs)`);
+  if (!used.has(`assets/${f}`)) fail(`assets/${f} is not referenced by README.md`);
 }
-if (await exists(path.join(dir, "typing.svg"))) fail("assets/typing.svg should be removed (role line lives in the hero)");
 
 // ---- coding-only scope: resume details must be gone ----
 // "JECRC" is tolerated only on a line that is the Dragonfire campus-event fact.
@@ -116,5 +127,5 @@ if (errors.length) {
 }
 console.log(
   `validation passed: ${imgs.length} images with alt text, ${Object.keys(svgs).length} SVGs within size caps, ` +
-    "motion guarded, text >= 10px at 330px, no resume details, no script/style in README",
+    "text as paths, motion guarded, text >= 10px at 330px, no resume details, no script/style in README",
 );

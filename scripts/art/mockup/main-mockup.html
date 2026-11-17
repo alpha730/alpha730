@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Profile, comic edition</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&display=swap">
+<style>
+body{margin:0}
+a{color:#111111}a:hover{color:#000000}
+@keyframes fall{0%{transform:translate(0,0) rotate(0deg);opacity:0}10%{opacity:1}100%{transform:translate(-34px,240px) rotate(220deg);opacity:0}}
+.lf{transform-box:fill-box;transform-origin:center;animation:fall 9s linear infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.bob{animation:bob 2.6s ease-in-out infinite}
+@keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.pop{transform-box:fill-box;transform-origin:center;animation:pop 1.8s ease-in-out infinite}
+@keyframes burn{50%{transform:scaleX(1.06) scaleY(.92)}}
+.burn{transform-box:fill-box;transform-origin:left center;animation:burn .6s ease-in-out infinite}
+@keyframes flick{50%{transform:scaleY(.75)}}
+.fl{transform-origin:bottom;animation:flick 1.6s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.lf,.bob,.pop,.burn,.fl{animation:none}}
+</style>
+</helmet>
+<div style="width: 880px; height: 2300px; box-sizing: border-box; padding: 40px; background-color: #ece2c4; background-image: radial-gradient(#d8cca8 1px, transparent 1.3px); background-size: 8px 8px; color: #111111; font-family: 'Comic Neue', 'Comic Sans MS', sans-serif; display: flex; flex-direction: column; gap: 24px">
+
+<svg width="0" height="0" style="position: absolute" aria-hidden="true">
+<defs>
+<pattern id="htB" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="3.5" cy="3.5" r="2.2" fill="#2f6f9a"/></pattern>
+<pattern id="htK" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><circle cx="3" cy="3" r="1.4" fill="#111111"/></pattern>
+<pattern id="htR" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(15)"><circle cx="3" cy="3" r="1.6" fill="#6e0d15"/></pattern>
+<pattern id="xh" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0 0 L6 6 M6 0 L0 6" stroke="#111111" stroke-width="1"/></pattern>
+<linearGradient id="vfade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#000000"/></linearGradient>
+<linearGradient id="vfadeInv" x1="0" y1="0" x2="0" y2="1"><stop offset="0.35" stop-color="#000000"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+<mask id="vfadeM" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#vfade)"/></mask>
+<mask id="vfadeInvM" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#vfadeInv)"/></mask>
+<path id="rays" d="M70 0 L400 0 M65 27 L370 153 M49 49 L283 283 M27 65 L153 370 M0 70 L0 400 M-27 65 L-153 370 M-49 49 L-283 283 M-65 27 L-370 153 M-70 0 L-400 0 M-65 -27 L-370 -153 M-49 -49 L-283 -283 M-27 -65 L-153 -370 M0 -70 L0 -400 M27 -65 L153 -370 M49 -49 L283 -283 M65 -27 L370 -153" stroke="#111111" stroke-width="2" fill="none"/>
+<path id="burst" d="M0 -78 L14 -52 L44 -66 L42 -38 L76 -34 L54 -12 L80 10 L52 22 L64 50 L34 44 L24 74 L4 50 L-18 76 L-26 46 L-56 58 L-48 30 L-80 16 L-54 -4 L-74 -30 L-44 -32 L-50 -62 L-22 -48 Z" stroke-linejoin="miter"/>
+<path id="spark" d="M0 -10 L3 -3 L10 0 L3 3 L0 10 L-3 3 L-10 0 L-3 -3 Z"/>
+<path id="leaf" d="M0 0 C4 -5 10 -5 12 0 C10 5 4 5 0 0 Z"/>
+<g id="arrowL"><path d="M0 0 L200 0" stroke="#111111" stroke-width="3"/><path d="M0 0 L14 -7 L14 7 Z" fill="#111111"/><path d="M186 0 l12 -9 M186 0 l12 9 M176 0 l12 -9 M176 0 l12 9" stroke="#111111" stroke-width="2" fill="none"/></g>
+<path id="raven" d="M0 0 C8 -10 18 -12 26 -6 C30 -14 40 -16 48 -10 C42 -9 38 -5 36 0 C44 2 50 6 54 10 C44 8 36 8 30 10 C22 12 10 8 0 0 Z"/>
+<clipPath id="moonC"><circle cx="700" cy="74" r="34"/></clipPath>
+<clipPath id="eyeC"><path d="M60 124 Q192 26 324 124 Q192 222 60 124 Z"/></clipPath>
+</defs>
+</svg>
+
+<div style="height: 48px; box-sizing: border-box; padding: 0 18px; background: #111111; box-shadow: 6px 6px 0 {{accent}}; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<span style="font-family: Bangers, Impact, sans-serif; font-size: 28px; letter-spacing: 2px; color: #f5c842">THE NORTHERN REALM</span>
+<span style="font-family: Bangers, Impact, sans-serif; font-size: 20px; letter-spacing: 1.5px; color: #f4ecd6">ISSUE 01 · @ALPHA730</span>
+</div>
+
+<div style="position: relative; height: 440px; box-sizing: border-box; border: 4px solid #111111; box-shadow: 6px 6px 0 #111111; overflow: hidden; background: #1c2633">
+<img src="/_blob/19ff7e3e1985264f951f8485642e8d1e" alt="Pixel-art night scene: a pale heart tree with blood-red leaves and a carved face standing in snow, a raven flying across the moon" style="position: absolute; left: 0; top: 0; width: 792px; height: 432px; image-rendering: pixelated">
+<svg viewBox="0 0 792 432" width="792" height="432" aria-hidden="true" style="position: absolute; left: 0; top: 0; display: block; color: {{accent}}">
+<rect x="18" y="18" width="236" height="36" fill="#f5c842" stroke="#111111" stroke-width="3"/>
+<text x="30" y="42" font-family="'Comic Neue', 'Comic Sans MS', sans-serif" font-weight="700" font-size="15" letter-spacing="0.5" fill="#111111">MEANWHILE, IN THE NORTH...</text>
+
+<path d="M362 64 L420 78 L380 60 Z" fill="#ffffff" stroke="#111111" stroke-width="3" stroke-linejoin="round"/>
+<ellipse cx="336" cy="46" rx="70" ry="26" fill="#ffffff" stroke="#111111" stroke-width="3"/>
+<path d="M365 62 L414 76 L378 59 Z" fill="#ffffff"/>
+<text x="336" y="55" text-anchor="middle" font-family="Bangers, Impact, sans-serif" font-size="26" letter-spacing="1" fill="#111111">@alpha730</text>
+
+<text x="48" y="222" font-family="Bangers, Impact, sans-serif" font-size="112" letter-spacing="3" fill="currentColor" stroke="#111111" stroke-width="8" stroke-linejoin="round" paint-order="stroke">ARYAN</text>
+<text x="40" y="214" font-family="Bangers, Impact, sans-serif" font-size="112" letter-spacing="3" fill="#f5c842" stroke="#111111" stroke-width="8" stroke-linejoin="round" paint-order="stroke">ARYAN</text>
+<text x="48" y="326" font-family="Bangers, Impact, sans-serif" font-size="112" letter-spacing="3" fill="currentColor" stroke="#111111" stroke-width="8" stroke-linejoin="round" paint-order="stroke">KUMAR</text>
+<text x="40" y="318" font-family="Bangers, Impact, sans-serif" font-size="112" letter-spacing="3" fill="#f5c842" stroke="#111111" stroke-width="8" stroke-linejoin="round" paint-order="stroke">KUMAR</text>
+
+<rect x="18" y="346" width="336" height="58" fill="#f5c842" stroke="#111111" stroke-width="3"/>
+<text x="30" y="370" font-family="'Comic Neue', 'Comic Sans MS', sans-serif" font-weight="700" font-size="16" letter-spacing="0.5" fill="#111111">AI ENGINEER · EARTH OBSERVATION</text>
+<text x="30" y="392" font-family="'Comic Neue', 'Comic Sans MS', sans-serif" font-weight="700" font-size="16" letter-spacing="0.5" fill="#111111">LLM AGENT SAFETY</text>
+</svg>
+</div>
+
+<div style="height: 44px; display: flex; align-items: center; justify-content: center">
+<h2 style="margin: 0; font-family: Bangers, Impact, sans-serif; font-weight: 400; font-size: 40px; letter-spacing: 3px; color: #f5c842; -webkit-text-stroke: 2px #111111; text-shadow: 4px 4px 0 #111111">THE FOUR CHAPTERS</h2>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<a href="https://github.com/alpha730/Prompt-injection-Tester-" style="height: 380px; box-sizing: border-box; border: 4px solid #111111; box-shadow: 6px 6px 0 #111111; background: #f4ecd6; overflow: hidden; text-decoration: none; display: flex; flex-direction: column">
+<div style="position: relative; flex: none; width: 384px; height: 236px; border-bottom: 4px solid #111111; box-sizing: content-box">
+<img src="/_blob/5eb668a128071d0a6177d6c19bbbef91" alt="Pixel art: a towering wall of ice at night with torches along the top, arrows stuck in the ice and a dark pine forest at its foot" style="position: absolute; left: 0; top: 0; width: 384px; height: 236px; image-rendering: pixelated">
+<svg viewBox="0 0 384 236" width="384" height="236" aria-hidden="true" style="position: absolute; left: 0; top: 0; display: block; color: {{accent}}">
+<rect x="8" y="8" width="140" height="30" fill="#f5c842" stroke="#111111" stroke-width="3"/><text x="18" y="31" font-family="Bangers, Impact, sans-serif" font-size="21" letter-spacing="1" fill="#111111">I · THE WALL</text><g transform="translate(262,92) rotate(-10)"><text class="pop" text-anchor="middle" font-family="Bangers, Impact, sans-serif" font-size="40" letter-spacing="2" fill="currentColor" stroke="#111111" stroke-width="6" stroke-linejoin="round" paint-order="stroke">THUNK!</text></g><g transform="translate(304,176) scale(0.72)"><use href="#burst" fill="#f5c842" stroke="#111111" stroke-width="5"/></g><text x="304" y="188" text-anchor="middle" font-family="Bangers, Impact, sans-serif" font-size="36" letter-spacing="1" fill="currentColor" stroke="#111111" stroke-width="4" stroke-linejoin="round" paint-order="stroke">0/600</text>
+</svg>
+</div>
+<div style="padding: 10px 14px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 16px; line-height: 1.35; color: #111111">Prompt-injection robustness study. 600 attacked runs, none led to a harmful action. Task success 96.5–100%.</div>
+<div style="font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 12px; color: #3d3a33">LangGraph · Qwen via Groq · Sentinel-1/2 · ERA5</div>
+</div>
+</a>
+<a href="https://github.com/alpha730/sih-project" style="height: 380px; box-sizing: border-box; border: 4px solid #111111; box-shadow: 6px 6px 0 #111111; background: #f4ecd6; overflow: hidden; text-decoration: none; display: flex; flex-direction: column">
+<div style="position: relative; flex: none; width: 384px; height: 236px; border-bottom: 4px solid #111111; box-sizing: content-box">
+<img src="/_blob/1501f15949a7ee2aa6f5ffec44e9f5bb" alt="Pixel art: a black raven with a red eye perched on a branch in front of a full moon" style="position: absolute; left: 0; top: 0; width: 384px; height: 236px; image-rendering: pixelated">
+<svg viewBox="0 0 384 236" width="384" height="236" aria-hidden="true" style="position: absolute; left: 0; top: 0; display: block; color: {{accent}}">
+<rect x="8" y="8" width="196" height="30" fill="#f5c842" stroke="#111111" stroke-width="3"/><text x="18" y="31" font-family="Bangers, Impact, sans-serif" font-size="21" letter-spacing="1" fill="#111111">II · THE RAVEN'S EYE</text><g transform="translate(96,96) rotate(-8)"><text class="pop" text-anchor="middle" font-family="Bangers, Impact, sans-serif" font-size="40" letter-spacing="2" fill="#f5c842" stroke="#111111" stroke-width="6" stroke-linejoin="round" paint-order="stroke">CAW!</text></g><rect x="258" y="178" width="118" height="50" fill="#f4ecd6" stroke="#111111" stroke-width="3"/>
+<rect x="260" y="180" width="56" height="46" fill="url(#htK)"/>
+<path d="M317 180 V226 M317 196 H374 M317 212 H374 M340 180 V196 M356 196 V212 M332 212 V226" stroke="#111111" stroke-width="1.5"/>
+<rect x="268" y="214" width="30" height="14" fill="#f4ecd6"/>
+<text x="283" y="225" text-anchor="middle" font-family="'Comic Neue', 'Comic Sans MS', sans-serif" font-weight="700" font-size="11" fill="#111111">SAR</text>
+<rect x="320" y="181" width="52" height="14" fill="#f4ecd6"/>
+<text x="346" y="192" text-anchor="middle" font-family="'Comic Neue', 'Comic Sans MS', sans-serif" font-weight="700" font-size="11" fill="#111111">OPTICAL</text>
+</svg>
+</div>
+<div style="padding: 10px 14px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 16px; line-height: 1.35; color: #111111">Agentic Earth-observation platform: SAR + optical imagery with visual question answering. [YOUR METRIC]</div>
+<div style="font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 12px; color: #3d3a33">Python · PyTorch · LangGraph · Rasterio</div>
+</div>
+</a>
+<a href="https://github.com/alpha730/ASHA-Voice-Logging-Agent" style="height: 380px; box-sizing: border-box; border: 4px solid #111111; box-shadow: 6px 6px 0 #111111; background: #f4ecd6; overflow: hidden; text-decoration: none; display: flex; flex-direction: column">
+<div style="position: relative; flex: none; width: 384px; height: 236px; border-bottom: 4px solid #111111; box-sizing: content-box">
+<img src="/_blob/5458f43d361f9e48bf9607272399c061" alt="Pixel art: an unrolled parchment scroll with handwriting and a red wax seal, a quill and a lit candle on a wooden table" style="position: absolute; left: 0; top: 0; width: 384px; height: 236px; image-rendering: pixelated">
+<svg viewBox="0 0 384 236" width="384" height="236" aria-hidden="true" style="position: absolute; left: 0; top: 0; display: block; color: {{accent}}">
+<rect x="8" y="8" width="218" height="30" fill="#f5c842" stroke="#111111" stroke-width="3"/><text x="18" y="31" font-family="Bangers, Impact, sans-serif" font-size="21" letter-spacing="1" fill="#111111">III · THE SEALED SCROLL</text><g transform="translate(218,56) rotate(-6)"><text class="pop" text-anchor="middle" font-family="Bangers, Impact, sans-serif" font-size="40" letter-spacing="2" fill="#f5c842" stroke="#111111" stroke-width="6" stroke-linejoin="round" paint-order="stroke">SCRITCH!</text></g><g transform="translate(76,188) scale(0.72)"><use href="#burst" fill="#f5c842" stroke="#111111" stroke-width="5"/></g><text x="76" y="190" text-anchor="middle" font-family="Bangers, Impact, sans-serif" font-size="36" letter-spacing="1" fill="currentColor" stroke="#111111" stroke-width="4" stroke-linejoin="round" paint-order="stroke">139</text><text x="76" y="208" text-anchor="middle" font-family="Bangers, Impact, sans-serif" font-size="15" letter-spacing="1" fill="#111111">TESTS</text>
+</svg>
+</div>
+<div style="padding: 10px 14px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 16px; line-height: 1.35; color: #111111">Voice agent turning Hindi, English and Marwari home-visit reports into sealed, structured health records.</div>
+<div style="font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 12px; color: #3d3a33">Next.js · TypeScript · Supabase · Sarvam Saaras v3</div>
+</div>
+</a>
+<a href="https://github.com/alpha730/DUO-Game" style="height: 380px; box-sizing: border-box; border: 4px solid #111111; box-shadow: 6px 6px 0 #111111; background: #f4ecd6; overflow: hidden; text-decoration: none; display: flex; flex-direction: column">
+<div style="position: relative; flex: none; width: 384px; height: 236px; border-bottom: 4px solid #111111; box-sizing: content-box">
+<img src="/_blob/72900d7bd1c6d3b2a657a69b5673b4ca" alt="Pixel art: a dragon with red wings breathing a jet of fire over dark mountains at dusk, framed by AR viewfinder corners" style="position: absolute; left: 0; top: 0; width: 384px; height: 236px; image-rendering: pixelated">
+<svg viewBox="0 0 384 236" width="384" height="236" aria-hidden="true" style="position: absolute; left: 0; top: 0; display: block; color: {{accent}}">
+<rect x="8" y="8" width="170" height="30" fill="#f5c842" stroke="#111111" stroke-width="3"/><text x="18" y="31" font-family="Bangers, Impact, sans-serif" font-size="21" letter-spacing="1" fill="#111111">IV · DRAGONFIRE</text><path d="M354 16 H370 V32 M370 204 V220 H354 M30 220 H14 V204" fill="none" stroke="#f5c842" stroke-width="4"/><g transform="translate(290,44) rotate(-8)"><text class="pop" text-anchor="middle" font-family="Bangers, Impact, sans-serif" font-size="40" letter-spacing="2" fill="#f5c842" stroke="#111111" stroke-width="6" stroke-linejoin="round" paint-order="stroke">FWOOSH!</text></g><g transform="translate(316,184) scale(0.72)"><use href="#burst" fill="#f5c842" stroke="#111111" stroke-width="5"/></g><text x="316" y="186" text-anchor="middle" font-family="Bangers, Impact, sans-serif" font-size="26" letter-spacing="1" fill="currentColor" stroke="#111111" stroke-width="4" stroke-linejoin="round" paint-order="stroke">OCT 22</text><text x="316" y="204" text-anchor="middle" font-family="Bangers, Impact, sans-serif" font-size="15" letter-spacing="1" fill="#111111">2026</text>
+</svg>
+</div>
+<div style="padding: 10px 14px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 16px; line-height: 1.35; color: #111111">AR game for Duolingo's 10-year campaign, played at a campus event. Scan posters, catch Lingos.</div>
+<div style="font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 12px; color: #3d3a33">React · TypeScript · MindAR · Firebase</div>
+</div>
+</a>
+</div>
+
+<div style="height: 280px; box-sizing: border-box; border: 4px solid #111111; box-shadow: 6px 6px 0 #111111; background: #f4ecd6; overflow: hidden; display: flex">
+<img src="/_blob/610829c371c629f596c9b21ac7804d63" alt="Pixel art: a maester's chain of interlocking links in iron, bronze, gold, silver, black iron and copper, hanging on dark red velvet" style="display: block; flex: none; width: 300px; height: 272px; border-right: 4px solid #111111; image-rendering: pixelated">
+<div style="flex: 1; min-width: 0; padding: 16px 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap"><div style="background: #f5c842; border: 3px solid #111111; padding: 2px 12px; font-family: Bangers, Impact, sans-serif; font-size: 24px; letter-spacing: 1.5px">THE MAESTER'S CHAIN</div><span style="font-size: 14px; color: #3d3a33">one link for each discipline</span></div>
+<div style="display: flex; flex-direction: column; gap: 7px; font-size: 16px; line-height: 1.3">
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="flex: none; width: 12px; height: 12px; border: 2px solid #111111; border-radius: 50%; background: #5c5c62; align-self: center" title="iron"></span><span style="flex: none; width: 120px; font-family: Bangers, Impact, sans-serif; font-size: 18px; letter-spacing: 1px; color: {{accent}}">LANGUAGES</span><span>Python · Java</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="flex: none; width: 12px; height: 12px; border: 2px solid #111111; border-radius: 50%; background: #96582a; align-self: center" title="bronze"></span><span style="flex: none; width: 120px; font-family: Bangers, Impact, sans-serif; font-size: 18px; letter-spacing: 1px; color: {{accent}}">ML / DL</span><span>PyTorch · scikit-learn</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="flex: none; width: 12px; height: 12px; border: 2px solid #111111; border-radius: 50%; background: #b0842a; align-self: center" title="gold"></span><span style="flex: none; width: 120px; font-family: Bangers, Impact, sans-serif; font-size: 18px; letter-spacing: 1px; color: {{accent}}">LLMS &amp; AGENTS</span><span>LangGraph · LangChain · CrewAI · RAG · vector DBs</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="flex: none; width: 12px; height: 12px; border: 2px solid #111111; border-radius: 50%; background: #96989e; align-self: center" title="silver"></span><span style="flex: none; width: 120px; font-family: Bangers, Impact, sans-serif; font-size: 18px; letter-spacing: 1px; color: {{accent}}">GEOSPATIAL</span><span>Rasterio/GDAL · GeoPandas · Sentinel-1/2 · STAC</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="flex: none; width: 12px; height: 12px; border: 2px solid #111111; border-radius: 50%; background: #2c2c32; align-self: center" title="black iron"></span><span style="flex: none; width: 120px; font-family: Bangers, Impact, sans-serif; font-size: 18px; letter-spacing: 1px; color: {{accent}}">WEB</span><span>React · Node.js · Next.js · TypeScript</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="flex: none; width: 12px; height: 12px; border: 2px solid #111111; border-radius: 50%; background: #a04c28; align-self: center" title="copper"></span><span style="flex: none; width: 120px; font-family: Bangers, Impact, sans-serif; font-size: 18px; letter-spacing: 1px; color: {{accent}}">TOOLS</span><span>Git · Supabase · Vercel · Render · n8n</span></div>
+</div>
+</div>
+</div>
+
+<div style="height: 250px; box-sizing: border-box; border: 4px solid #111111; box-shadow: 6px 6px 0 #111111; background: #f4ecd6; padding: 16px 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<div style="background: #f5c842; border: 3px solid #111111; padding: 2px 12px; font-family: Bangers, Impact, sans-serif; font-size: 24px; letter-spacing: 1.5px">THE LONG WATCH</div>
+<div style="display: flex; align-items: baseline; gap: 10px"><span style="font-family: Bangers, Impact, sans-serif; font-size: 64px; line-height: 0.9; letter-spacing: 2px; color: #f5c842; -webkit-text-stroke: 2px #111111; text-shadow: 4px 4px 0 {{accent}}">633</span><span style="font-size: 16px">contributions, last 12 months</span></div>
+</div>
+<div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; padding: 0 6px" aria-hidden="true">
+<sc-for list="{{torches}}" as="t" hint-placeholder-count="52">
+<div style="width: 9px; height: 40px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end">
+<sc-if value="{{t.lit}}" hint-placeholder-val="{{true}}"><div class="fl" style="width: 8px; height: 12px; box-sizing: border-box; border: 2px solid #111111; border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%; background: #f5c842"></div></sc-if>
+<div style="width: 3px; height: 20px; background: #111111"></div>
+</div>
+</sc-for>
+</div>
+<div style="border: 3px solid #111111; background: #f4ecd6" aria-hidden="true">
+<div style="height: 15px; background-image: repeating-linear-gradient(90deg, transparent 0 32px, #111111 32px 34px)"></div>
+<div style="height: 15px; border-top: 2px solid #111111; background-image: repeating-linear-gradient(90deg, transparent 0 32px, #111111 32px 34px); background-position: 17px 0"></div>
+</div>
+</div>
+<div style="font-size: 14px; color: #3d3a33">One torch per week, lit on weeks with commits. Public contributions only. The torch pattern here is an example.</div>
+</div>
+
+<div style="position: relative; height: 230px; box-sizing: border-box; border: 4px solid #111111; box-shadow: 6px 6px 0 {{accent}}; background-color: #111111; background-image: radial-gradient(rgba(244, 236, 214, 0.16) 1.2px, transparent 1.5px); background-size: 7px 7px; overflow: hidden; padding: 28px 32px; display: flex; flex-direction: column; gap: 18px">
+<svg viewBox="0 0 260 222" width="260" height="222" aria-hidden="true" style="position: absolute; right: 0; top: 0; display: block; color: {{accent}}">
+<circle cx="150" cy="92" r="66" fill="#f4ecd6" stroke="#f4ecd6" stroke-width="2"/>
+<circle cx="168" cy="104" r="66" fill="url(#htK)" opacity="0.45"/>
+<g transform="translate(66,96) scale(2.6)"><g class="bob"><use href="#raven" fill="#111111" stroke="#111111" stroke-width="0.6"/><circle cx="44" cy="-9" r="1.2" fill="currentColor"/></g></g>
+</svg>
+<div style="position: relative; font-family: Bangers, Impact, sans-serif; font-size: 48px; line-height: 1; letter-spacing: 3px; color: #f5c842; text-shadow: 4px 4px 0 {{accent}}">SEND A RAVEN</div>
+<div style="position: relative; display: flex; gap: 16px; flex-wrap: wrap">
+<a href="https://aryan-kumar-portfolio-eight.vercel.app/" style="background: #f5c842; color: #111111; border: 3px solid #f4ecd6; box-shadow: 4px 4px 0 {{accent}}; padding: 10px 18px; font-family: Bangers, Impact, sans-serif; font-size: 22px; letter-spacing: 1.5px; text-decoration: none">PORTFOLIO</a>
+<a href="https://github.com/alpha730" style="background: #f5c842; color: #111111; border: 3px solid #f4ecd6; box-shadow: 4px 4px 0 {{accent}}; padding: 10px 18px; font-family: Bangers, Impact, sans-serif; font-size: 22px; letter-spacing: 1.5px; text-decoration: none">GITHUB</a>
+</div>
+<div style="position: absolute; right: 16px; bottom: 16px; background: #f5c842; border: 3px solid #f4ecd6; padding: 4px 12px; font-size: 15px; letter-spacing: 0.5px; color: #111111">TO BE CONTINUED...</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#c41e2a","options":["#c41e2a","#2f6f9a","#2f7d4a"]},"$preview":{"width":880,"height":2300}}'>
+class Component extends DCLogic {
+renderVals() {
+var bits = '0000100110001' + '0110001101110' + '1101110110111' + '1011111101110';
+var torches = bits.split('').map(function (b) { return { lit: b === '1' }; });
+return { accent: this.props.accent ?? '#c41e2a', torches: torches };
+}
+}
+</script>
+</body>
+</html>
